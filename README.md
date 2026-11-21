@@ -4,6 +4,12 @@ Source-grounded revision cards and confidence signals. Education-track prototype
 
 ## Try it
 
+- [Open the live app](https://aditya2375.github.io/recallroute/)
+- [Watch the captioned demo](https://youtu.be/t1hJ-PN4ZD0)
+- [Download the modular source archive and tests](https://github.com/Aditya2375/recallroute/blob/main/12-recallroute-source.zip) using GitHub's download button.
+
+To run locally:
+
 1. Install Python 3, then run `python3 -m http.server 8080` in this folder.
 2. Open `http://localhost:8080` in a browser.
 3. Load the synthetic library example, or paste notes you have permission to use, one fact per line.
