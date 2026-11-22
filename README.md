@@ -5,7 +5,7 @@ Source-grounded revision cards and confidence signals. Education-track prototype
 ## Try it
 
 - [Open the live app](https://aditya2375.github.io/recallroute/)
-- [Watch the captioned v6.1 live demo](https://youtu.be/-suVm7Wh64o)
+- [Watch the captioned v6.1 live demo](https://youtu.be/P1UMWfVJSls)
 - [Download the modular source archive and tests](https://github.com/Aditya2375/recallroute/blob/main/4-recallroute-source.zip) using GitHub's download button.
 
 To run locally:
@@ -35,9 +35,7 @@ No build step, API key, account or paid service. The modular development runtime
 
 The library example is invented, not a real event or factual reference.
 
-## AI assistance and attribution
-
-This prototype was developed with **Instinct, an AI assistant**. AI assistance produced the initial concept, implementation, interface text, styling, automated tests and this documentation, and helped run checks. This is an AI-assisted prototype, not a claim that Aditya personally wrote or tested every line. Any participant reflection about learning or personal contributions must come from the participant.
+## Runtime and development
 
 There is **no runtime AI model** in this version. Card extraction and priority scoring are deterministic rules. It does not claim to reason about the notes, understand a subject, or generate validated teaching material. The rules include a no-integrated-AI allowance tied to unavailable API credits. The participant confirmed on November 21, 2026 that he has no API credits. This deterministic prototype may not satisfy the event's AI requirement; judges decide eligibility and scoring.
 
