@@ -5,7 +5,7 @@ Source-grounded revision cards and confidence signals. Education-track prototype
 ## Try it
 
 - [Open the live app](https://aditya2375.github.io/recallroute/)
-- [Watch the original prototype demo (redesign recording pending)](https://youtu.be/t1hJ-PN4ZD0)
+- [Watch the captioned v6.1 live demo](https://youtu.be/-suVm7Wh64o)
 - [Download the modular source archive and tests](https://github.com/Aditya2375/recallroute/blob/main/4-recallroute-source.zip) using GitHub's download button.
 
 To run locally:
