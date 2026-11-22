@@ -1,21 +1,224 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#142b29"><title>RecallRoute | Know what needs another look</title><style>@import url('data:text/css,');
-:root{--ink:#163b36;--muted:#657570;--line:#dce4dd;--paper:#f6f7f1;--green:#dfece1;--accent:#e1edb8;--white:#fff;--red:#8f3c35}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}button,input,textarea{font:inherit}button,a,input,textarea{outline-offset:4px}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #759b6b}a{color:inherit}h1,h2,h3,p{margin-top:0}h2{font-size:24px;line-height:1.25;font-weight:600;letter-spacing:-.7px}h3{font-size:18px;line-height:1.35;font-weight:600}.top{height:86px;max-width:1280px;margin:auto;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:0 24px}.brand{text-decoration:none;display:flex;align-items:center;gap:10px;font-size:20px;font-weight:650;letter-spacing:-.6px}.mark{background:var(--ink);color:var(--accent);border-radius:9px;display:grid;place-items:center;width:36px;height:36px;font-size:21px;font-family:Georgia,serif;font-style:italic}.privacy{font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center}.privacy i{width:6px;height:6px;background:#6b9969;border-radius:50%}main{max-width:1280px;margin:auto;padding:0 24px}.hero{padding:52px 0 40px;display:flex;align-items:center;justify-content:space-between;gap:40px}.eyebrow,.mini-label{font-size:10px;font-weight:700;letter-spacing:1.6px;margin-bottom:15px}.hero h1{font-size:clamp(34px,3.8vw,52px);line-height:1.1;font-weight:500;letter-spacing:-2px;margin-bottom:20px}.hero h1 em{font-weight:400;font-family:Georgia,serif;color:#67805a}.intro{font-size:15px;max-width:555px;color:var(--muted);margin-bottom:0}.hero-note{border-left:1px solid var(--line);padding:12px 0 12px 34px;min-width:300px}.hero-note .mini-label{color:#6b7e6d}.hero-note div{font-size:18px;margin:12px 0}.hero-note div span{margin:0 8px;color:#8a9a86}.hero-note p{font-size:13px;color:var(--muted);margin-bottom:0}.steps{display:flex;gap:8px;border-bottom:1px solid var(--line);margin-bottom:25px}.steps button{border:0;background:transparent;padding:18px 22px;color:var(--muted);border-bottom:3px solid transparent;font-size:14px}.steps button.active{color:var(--ink);border-color:var(--ink)}.steps b{font-size:11px;margin-right:8px;color:#7a8a7b}.pill{background:#e9eee5;border-radius:5px;font-size:11px;padding:4px 8px;margin-left:7px;white-space:nowrap}.grid{display:grid;grid-template-columns:minmax(0,2.35fr) minmax(260px,1fr);gap:22px}.panel{background:var(--white);border:1px solid var(--line);border-radius:13px;padding:28px}.section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.section-head h2{max-width:440px;margin-bottom:10px}.section-head .eyebrow{color:#6e7f68;margin-bottom:8px}.muted{font-size:13px;color:var(--muted);line-height:1.65}.text-btn{background:none;border:0;color:var(--ink);padding:4px 0;font-size:12px;white-space:nowrap;text-decoration:underline;text-underline-offset:4px}.notes-panel textarea{width:100%;height:235px;resize:vertical;border:1px solid #dce3d9;background:#fafbf7;border-radius:8px;padding:18px;font-size:13px;line-height:1.9;color:var(--ink);margin-top:6px}.source-foot{display:flex;justify-content:space-between;color:#7e8b80;font-size:10px;margin-top:6px;gap:14px}.actions{display:flex;align-items:center;gap:16px;margin-top:23px;flex-wrap:wrap}.primary,.secondary{border-radius:6px;padding:12px 17px;font-size:12px;font-weight:550;transition:background .15s}.primary{background:var(--ink);color:white;border:1px solid var(--ink)}.primary:hover{background:#29544c}.primary span{padding-left:20px}.secondary{background:#fff;border:1px solid #ced8cc;color:var(--ink)}.secondary:hover{background:#f0f4ec}.side-stack{display:flex;flex-direction:column;gap:20px}.small-panel{padding:25px}.small-panel h3{margin-bottom:11px}.small-panel p{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:0}.small-panel.green{background:var(--green);border-color:#d1dfd0}.small-icon{font-size:28px;display:block;margin-bottom:18px}.tiny{font-size:10px!important;border-top:1px solid var(--line);margin-top:17px;padding-top:13px}#status:empty{display:none}#status{padding:10px 16px;border-radius:6px;background:#edf1e6;font-size:13px}#status.error{background:#fbe9e4;color:var(--red)}footer{display:flex;gap:22px;align-items:center;margin:34px 0 25px;padding-top:20px;border-top:1px solid var(--line);font-size:10px;color:var(--muted);flex-wrap:wrap}footer div{display:flex;gap:15px;align-items:center;flex:1}footer strong{color:var(--ink);font-size:12px}.danger{color:var(--red)}[hidden]{display:none!important}.practice-grid{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(280px,1fr);gap:22px}.question{font-size:27px;line-height:1.5;letter-spacing:-.4px;margin:25px 0}.practice-panel label{font-size:12px;font-weight:550}.practice-panel input[type=text]{display:block;width:100%;margin-top:8px;border:1px solid #cbd7ca;border-radius:7px;padding:14px;color:var(--ink);background:#fafbf7}.confidence-head{display:flex;justify-content:space-between;margin:26px 0 12px}.confidence-head output{font-size:12px;font-weight:650}input[type=range]{width:100%;accent-color:var(--ink)}.range-labels{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.queue-panel h2{font-size:22px}.queue-panel ol{padding:0;list-style:none;margin:20px 0}.queue-panel li{padding:13px 0;border-top:1px solid var(--line);display:flex;align-items:center;gap:12px;font-size:12px}.queue-panel li>span:first-child{font-size:10px;color:#7c8d77;border:1px solid var(--line);border-radius:4px;padding:4px;min-width:30px;text-align:center}.queue-panel small{color:#748369;display:block;font-size:10px;margin-top:3px}.queue-note{padding-top:16px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}#feedback{background:#f1f5ed;border-radius:8px;padding:22px;margin-top:25px}#verdict{font-size:17px;font-weight:600}.answer-label{font-size:9px;letter-spacing:1.5px;margin-bottom:8px}#feedback strong{font-size:22px}blockquote{border-left:2px solid #a8b8a0;padding-left:15px;margin:16px 0;font-size:13px;color:#4d6252}#reflection{margin-bottom:14px}.insights-top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:10px 0 25px}.insights-top h2{margin-bottom:9px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:17px;margin-bottom:22px}.stats article{padding:24px;border:1px solid var(--line);border-radius:10px;background:#fff}.stats span{font-size:11px;color:var(--muted);display:block}.stats strong{display:block;font-size:36px;line-height:1.3;font-weight:500;margin-top:12px}.bar-row{display:flex;align-items:center;gap:13px;font-size:11px;margin-top:18px}.bar-row>span{width:75px}.bar-row b{font-size:11px;font-weight:500;width:35px;text-align:right}.bar{height:12px;background:#edf0e9;border-radius:4px;flex:1;overflow:hidden}.bar i{height:100%;display:block;background:#42694f;width:0;transition:width .2s}.bar.light i{background:#aac284}.history-panel{margin-top:22px}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;text-align:left;font-size:12px}th{font-size:10px;color:var(--muted);font-weight:500}td,th{padding:13px 12px;border-bottom:1px solid var(--line)}td{max-width:280px;overflow-wrap:anywhere}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:800px){.hero{padding:30px 0;display:block}.hero-note{display:none}.grid,.practice-grid{grid-template-columns:1fr}.side-stack{display:grid;grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(2,1fr)}.top{height:70px}.hero h1{letter-spacing:-1px}.panel{padding:22px}.steps button{padding:16px 12px}.section-head{flex-wrap:wrap}.section-head h2{font-size:22px}.insights-top{align-items:flex-start;flex-direction:column}.question{font-size:23px}}@media(max-width:480px){main{padding:0 16px}.top{padding:0 16px}.privacy{font-size:9px}.side-stack{grid-template-columns:1fr}.steps{gap:0}.steps button{font-size:11px;padding:14px 8px}.steps b{margin-right:4px}.pill{font-size:9px;margin-left:3px}.hero h1{font-size:35px}.intro{font-size:13px}.stats article{padding:18px}.stats strong{font-size:29px}.source-foot{display:block}.source-foot span{display:block}footer div{flex-basis:100%}.question{font-size:21px}}
-</style></head><body>
-<header class="top"><a class="brand" href="#"><span class="mark">rr</span>RecallRoute</a><span class="privacy"><i></i> Local-first · No API keys</span></header>
-<main><section class="hero"><div><p class="eyebrow">A CLEARER WAY TO REVISE</p><h1>Knowing it feels different<br>from <em>remembering it.</em></h1><p class="intro">Turn your notes into evidence-linked practice. Compare confidence with recall, then revisit the gaps.</p></div><div class="hero-note"><span class="mini-label">THE PRACTICE LOOP</span><div>Read <span>→</span> Recall <span>→</span> Reflect</div><p>No generated facts.<br>Every answer points back to your notes.</p></div></section>
-<nav class="steps" aria-label="Workspace"><button class="active" data-view="notes"><b>01</b> Your notes</button><button data-view="practice"><b>02</b> Practice <span id="card-count" class="pill">0</span></button><button data-view="insights"><b>03</b> Your signals</button></nav>
-<p id="status" role="status" aria-live="polite"></p>
-<section id="notes-view" class="view"><div class="grid"><article class="panel notes-panel"><div class="section-head"><div><p class="eyebrow">START WITH A SOURCE</p><h2>A small set of notes. A useful next step.</h2></div><button id="sample" class="text-btn">Load example ↗</button></div><p class="muted">One fact per line works best. Review generated blanks before studying. Use only notes you have permission to use.</p><label class="sr-only" for="source">Your study notes</label><textarea id="source" maxlength="24000" spellcheck="false" placeholder="Paste a few lines of your notes here..."></textarea><div class="source-foot"><span id="char-count">0 / 24,000 characters</span><span>Up to 40 practice cards</span></div><div class="actions"><button id="generate" class="primary">Make practice cards <span>→</span></button><button id="import" class="secondary">Import session</button><input id="import-file" type="file" accept="application/json,.json" hidden></div></article><aside class="side-stack"><div class="panel small-panel green"><span class="small-icon">↳</span><h3>Your source stays the source.</h3><p>Cards are created by extracting words or numbers, not by inventing explanations. Each answer keeps its original line.</p></div><div class="panel small-panel"><h3>Honest about the limits</h3><p>This is a study aid, not an answer authority. Blanks can be awkward. Exact text matching can mark a valid paraphrase wrong.</p><p class="tiny">AI-assisted development, disclosed in the README. No runtime AI model or external service.</p></div></aside></div></section>
-<section id="practice-view" class="view" hidden><div class="practice-grid"><article class="panel practice-panel"><div class="section-head"><p class="eyebrow">RECALL, BEFORE YOU REVEAL</p><span id="line-badge" class="pill">Source line</span></div><div id="empty-practice"><h2>Your practice starts with your notes.</h2><p class="muted">Make a few cards first. The library example is a safe place to try.</p><button class="secondary" id="back-notes">Go to notes →</button></div><div id="practice-content" hidden><p id="prompt" class="question"></p><label for="answer">Fill the blank</label><input id="answer" type="text" autocomplete="off" placeholder="Try to recall the missing text"><div class="confidence-head"><label for="confidence">How sure are you?</label><output id="confidence-value" for="confidence">50%</output></div><input id="confidence" type="range" min="0" max="100" step="5" value="50"><div class="range-labels"><span>A guess</span><span>Quite sure</span></div><div class="actions"><button id="check" class="primary">Check against source</button><button id="skip" class="text-btn">Skip for now</button></div><div id="feedback" role="status" hidden><p id="verdict"></p><p class="answer-label">SOURCE ANSWER</p><strong id="expected"></strong><blockquote id="evidence"></blockquote><p id="reflection" class="muted"></p><button id="next" class="primary">Next card →</button></div></div></article><aside class="panel queue-panel"><p class="eyebrow">YOUR ROUTE</p><h2>What needs another look</h2><p class="muted">Missed answers come first. High-confidence misses get extra attention. New cards follow.</p><ol id="queue"></ol><div class="queue-note">This is a simple priority rule, not a validated spaced-repetition algorithm.</div></aside></div></section>
-<section id="insights-view" class="view" hidden><div class="insights-top"><div><p class="eyebrow">REFLECTION, NOT A GRADE</p><h2>Does confidence match recall?</h2><p class="muted">Only this session. Small samples are noisy, and exact-match scoring is limited.</p></div><button id="export-csv" class="secondary">Export attempts CSV ↗</button></div><div class="stats"><article><span>Attempts</span><strong id="stat-attempts">0</strong></article><article><span>Exact-match recall</span><strong id="stat-accuracy">—</strong></article><article><span>Average confidence</span><strong id="stat-confidence">—</strong></article><article><span>High-confidence misses</span><strong id="stat-misses">0</strong></article></div><div class="grid"><article class="panel"><h3>Confidence and recall</h3><p class="muted" id="gap-text">Practice a card to see your first signal.</p><div class="bar-row"><span>Recall</span><div class="bar"><i id="accuracy-bar"></i></div><b id="accuracy-label">0%</b></div><div class="bar-row"><span>Confidence</span><div class="bar light"><i id="confidence-bar"></i></div><b id="confidence-label">0%</b></div></article><article class="panel"><h3>Keep a useful record</h3><p class="muted">Download a session to resume later. Files contain your source notes and answers. Share them only if you mean to.</p><button id="export-session" class="secondary">Download session JSON ↗</button></article></div><article class="panel history-panel"><h3>Recent attempts</h3><div class="table-wrap"><table><thead><tr><th>Source</th><th>Expected answer</th><th>Your answer</th><th>Recall</th><th>Confidence</th></tr></thead><tbody id="history"></tbody></table></div></article></section>
-<footer><div><strong>RecallRoute</strong><span>A small tool for more honest practice.</span></div><button id="clear" class="text-btn danger">Clear this session</button><span>Notes stay in this tab. Refreshing clears them.</span></footer></main><script type="module">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' data:; img-src data: blob:; connect-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6f6f2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='2' fill='%23f45a27'/%3E%3Cpath d='M12 25V11h12m-6-6 6 6-6 6' fill='none' stroke='%2322231f' stroke-width='2.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+<meta name="description" content="Make source-linked revision cards from your notes. Practice recall, record confidence, and revisit misses. No account or API key.">
+<title>RecallRoute | Know what needs another look</title>
+<style>
+:root{--ink:#22231f;--muted:#6a6b62;--line:#dcded5;--paper:#f6f6f2;--orange:#f45a27;--accent:#ca3d13;--soft:#eeeeE7;--ease:cubic-bezier(.22,1,.36,1);font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,textarea{font:inherit}button,a,input,textarea{touch-action:manipulation}button{cursor:pointer}button:disabled{opacity:.45;cursor:default}a{color:inherit;text-decoration:none}button{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid #2958d5;outline-offset:4px}[hidden]{display:none!important}.sr-only,.skip-link:not(:focus){position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.skip-link:focus{position:fixed;z-index:90;background:white;padding:15px}.vignette,.grain,#topo{display:none}.top{display:flex;justify-content:space-between;align-items:center;min-height:82px;padding:0 4%;border-bottom:1px solid var(--line);gap:20px}.brand{display:flex;align-items:center;font-size:23px;font-weight:750;letter-spacing:-1px;white-space:nowrap}.mark{display:grid;place-items:center;width:35px;height:35px;background:var(--orange);margin-right:10px;font-size:29px;color:#222;line-height:1}.edition{font-size:13px;font-weight:400;letter-spacing:0;margin-left:17px;color:var(--muted)}.header-tools{display:flex;align-items:center;gap:25px;font-size:12px}.privacy{display:flex;align-items:center;gap:8px}.privacy i{width:6px;height:6px;background:#4f6f34;border-radius:100%}.text-btn{border:0;background:none;padding:10px 0;font-size:13px;text-decoration:underline;text-underline-offset:4px}.text-btn:hover{color:var(--accent)}main{max-width:1600px;margin:auto;padding:0 4%}.steps{display:flex;position:relative;gap:32px;border-bottom:1px solid var(--line);height:71px;align-items:stretch}.steps button{border:0;background:none;color:var(--muted);display:flex;gap:12px;align-items:center;padding:0 2px;font-size:14px;z-index:1}.steps b{font-size:11px;font-weight:400;color:var(--muted)}.steps button.active{color:var(--ink);font-weight:700}.steps button.active b{color:var(--accent)}.steps-indicator{height:3px;background:var(--ink);position:absolute;bottom:-1px;transition:left .4s var(--ease),width .4s var(--ease)}.pill{border:1px solid var(--line);font-size:11px;padding:5px 8px;font-weight:400;white-space:nowrap;border-radius:4px}.steps .pill{padding:2px 6px;min-width:22px;text-align:center}#status{margin:0;min-height:24px;font-size:12px;padding:5px 0}#status:empty{min-height:24px;padding:0}#status.error{color:#b43213}.view{animation:enter .5s var(--ease)}.capture-layout{display:grid;grid-template-columns:.95fr 1.05fr;min-height:620px;gap:0}.hero{background:var(--orange);position:relative;isolation:isolate;overflow:hidden;padding:30px 36px 18px;display:flex;flex-direction:column;min-width:0}.hero:before{content:'';position:absolute;z-index:-1;inset:0;opacity:.15;background-image:radial-gradient(#803617 .7px,transparent .8px);background-size:5px 5px}.hero-top{display:flex;align-items:center;justify-content:space-between}.studio-label{font-size:10px;letter-spacing:1.3px;font-weight:700}.star{font-size:41px;line-height:1;animation:rotate 35s linear infinite}h1{font-size:clamp(64px,6.4vw,105px);line-height:.88;font-weight:700;letter-spacing:-7px;margin:26px 0 14px}h1 span{padding-left:65px}.intro{font-size:16px;line-height:1.45;letter-spacing:-.3px;margin:0}.paper-scene{position:relative;min-height:285px;margin:0 -36px;perspective:1100px;display:flex;align-items:center;justify-content:center}.orbit{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.orbit path{stroke:#6f2b12;stroke-width:1;fill:none;opacity:.4;stroke-dasharray:5 6}.orbit circle{fill:#22231f}.paper-stack{position:relative;width:68%;height:220px;transform:rotate(-8deg);transform-style:preserve-3d;transition:transform .7s var(--ease)}.sheet{position:absolute;inset:0;border:1px solid #c3bfb1;box-shadow:0 5px 8px #71300d16;background:#f8f7ef;border-radius:2px}.sheet-back{transform:translate(24px,10px) rotate(13deg);background:#edc3a1}.sheet-mid{transform:translate(12px,5px) rotate(6deg);background:#eae6d8}.sheet-front{padding:18px 22px;text-align:left;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 15px 40px #7e240b33;backface-visibility:hidden}.sheet-front:hover{background:#fffef8}.paper-meta{font-size:7px;letter-spacing:.7px;display:flex;justify-content:space-between;border-bottom:1px solid #d4d2c8;padding-bottom:9px}.paper-question{font-size:27px;line-height:1.06;letter-spacing:-.9px;font-weight:600}.paper-question u{text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--orange)}.paper-bottom{font-size:8px;display:flex;align-items:center;justify-content:space-between}.flip-icon{font-size:22px}.hero-bottom{display:flex;align-items:center;justify-content:space-between;font-size:11px;padding-top:6px;margin-top:auto;border-top:1px solid #b8432059}.hand-drawn{font-size:30px;line-height:1}.notes-panel{padding:30px 0 22px 42px;display:flex;flex-direction:column;min-width:0}.eyebrow{font-size:10px;font-weight:700;letter-spacing:1.1px;margin:0 0 15px;color:var(--muted)}h2{font-size:37px;line-height:1.06;font-weight:500;letter-spacing:-1.5px;margin:0 0 18px}h3{font-size:17px;letter-spacing:-.4px;font-weight:600;margin:0 0 10px}.muted{font-size:13px;color:var(--muted);line-height:1.65;margin:0 0 18px}.notes-panel>.muted{max-width:400px;margin-bottom:24px}textarea{border:1px solid #d7d9ce;background:#eeefe8;border-radius:0;width:100%;min-height:225px;resize:vertical;padding:20px;line-height:1.6;font-size:14px;box-shadow:inset 0 1px 3px #00000002;color:var(--ink);flex:1}textarea::placeholder{color:#84877a}.source-foot{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:10px;padding:11px 0 20px}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px}.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;gap:28px;padding:15px 20px;border-radius:3px;font-size:13px;font-weight:600;border:1px solid var(--ink);transition:background .2s,transform .2s}.primary{background:var(--ink);color:#fff}.primary:hover:not(:disabled){background:#41443a;transform:translateY(-2px)}.primary span{font-size:18px}.secondary{background:transparent;border-color:var(--line)}.secondary:hover{background:#e8eadf}.notes-panel .actions{gap:15px}.notes-panel #import{margin-left:auto;border:0;padding:8px 0;text-decoration:underline;text-underline-offset:4px;font-size:11px;font-weight:400}.notes-panel #sample{font-size:11px}.side-stack{display:grid;grid-template-columns:1fr 1fr;gap:42px;margin:28px 0 15px;padding-top:22px;border-top:1px solid var(--line)}.small-panel{position:relative;display:grid;grid-template-columns:1fr 1.4fr;gap:0 25px}.small-panel h3{font-size:14px;max-width:180px}.small-panel p{font-size:11px;color:var(--muted);line-height:1.6;margin:0}.small-panel .tiny{grid-column:2;margin-top:6px;font-size:10px}.small-icon{display:none}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.practice-grid{display:grid;grid-template-columns:1.7fr 1fr;border:1px solid var(--line);margin-bottom:30px}.practice-panel{padding:30px 36px;background:#fffefa;min-width:0}.question{font-size:34px;line-height:1.5;letter-spacing:-1px;margin:25px 0 36px;min-height:100px;overflow-wrap:anywhere}.blank{display:inline;background:linear-gradient(transparent 63%,#fbe4d7 63%);color:#a12d0b;line-height:inherit;padding:0 5px;border-bottom:2px solid var(--orange);vertical-align:baseline;box-decoration-break:clone;-webkit-box-decoration-break:clone}.blank.revealed{background:#e5ebce;color:#384a15;border-color:#6a7a2c}label{font-size:12px;font-weight:600;display:block;margin-bottom:10px}input[type=text]{padding:15px 17px;border:1px solid #cbcec1;width:100%;font-size:16px;border-radius:3px;background:transparent}input[type=text]:disabled{color:#56594e;background:#eff0e8}.confidence-head{display:flex;justify-content:space-between;align-items:center;margin-top:25px}.confidence-head label{margin:0}output{font-size:23px;letter-spacing:-1px}input[type=range]{appearance:none;width:100%;height:3px;margin:23px 0 15px;background:linear-gradient(to right,var(--orange) var(--fill,50%),#dfe1d6 var(--fill,50%));accent-color:var(--orange)}input[type=range]::-webkit-slider-thumb{appearance:none;width:19px;height:19px;border-radius:100%;background:#fff;border:5px solid var(--orange);box-shadow:0 0 0 1px #c63b14}.range-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-bottom:26px}.queue-panel{padding:30px;background:#eceee5;border-left:1px solid var(--line);min-width:0}.queue-panel h2{font-size:29px;max-width:260px}.queue-panel .muted{font-size:11px}.route-map{max-width:100%;overflow:auto;border-top:1px solid #cfd3c3;border-bottom:1px solid #cfd3c3}.route-map svg{display:block;max-width:none;min-width:100%;height:130px}.route-path{stroke:#b5baa8;stroke-width:2;fill:none;transition:stroke-dashoffset 1.8s var(--ease)}.route-node .hit{fill:transparent}.route-node .dot{fill:#fff;stroke:#929b7d;stroke-width:1.5}.route-node .halo{fill:transparent;stroke:transparent;stroke-width:12}.route-node.current .halo{stroke:#f45a2730}.route-node.current .dot{fill:var(--orange);stroke:var(--accent)}.route-node text{font-size:9px;fill:#555c4c;text-anchor:middle}.route-node{cursor:pointer}.route-node.confmiss .dot,.route-node.missed .dot{fill:#bb4b2c}.route-node.recalled .dot{fill:#6d7c3b}.route-node:focus{outline:none}.route-node:focus .halo{stroke:#2958d566}#queue{padding:0;margin:15px 0;list-style:none}#queue li{display:flex;gap:13px;border-bottom:1px solid #d7dbcc;padding:13px 0;font-size:12px;line-height:1.5}#queue li>span:first-child{font-size:10px;color:var(--muted);padding-top:2px;min-width:24px}#queue small{display:block;font-size:10px;color:var(--muted);margin-top:4px}.queue-note{font-size:10px;line-height:1.6;color:var(--muted)}.st-confmiss,.st-miss{color:#a6381c!important}.st-ok{color:#56692b!important}#feedback{background:#eef2df;border-left:3px solid #738637;margin-top:28px;padding:22px;animation:enter .4s var(--ease)}#feedback.miss{background:#fbebe2;border-color:var(--orange)}#verdict{font-size:18px;line-height:1.4;font-weight:600;margin:0 0 20px}.answer-label{font-size:10px;letter-spacing:.7px;text-transform:uppercase;margin:0 0 8px}#expected{font-size:25px;overflow-wrap:anywhere}blockquote{margin:18px 0;font-size:13px;line-height:1.6;padding-left:14px;border-left:1px solid #b4b6a6;overflow-wrap:anywhere}#feedback .muted{font-size:11px}.insights-top{display:flex;justify-content:space-between;gap:25px;align-items:center;margin:20px 0}.insights-top h2{font-size:35px}.insights-top .secondary{white-space:nowrap}.stats{display:grid;grid-template-columns:repeat(4,1fr);margin:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.stats article{border-right:1px solid var(--line);padding:25px 20px}.stats article:first-child{padding-left:0}.stats article:last-child{border:0}.stats span{font-size:11px;color:var(--muted);display:block}.stats strong{font-size:65px;line-height:1.2;letter-spacing:-4px;font-weight:400;display:block;margin-top:20px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.grid>.panel{padding:25px;background:#eaece2}.bar-row{display:flex;align-items:center;gap:15px;font-size:11px;margin:20px 0}.bar-row>span{width:70px}.bar{flex:1;height:8px;background:#d4d9c7}.bar i{display:block;width:0;height:100%;background:#333b27;transition:width .8s var(--ease)}.bar.light i{background:var(--orange)}.bar-row b{font-weight:400;width:30px;text-align:right}.history-panel{padding:30px 0}.table-wrap{max-width:100%;overflow:auto}table{border-collapse:collapse;min-width:600px;width:100%;text-align:left;font-size:12px}th{font-weight:400;font-size:10px;color:var(--muted);padding:15px 12px;border-bottom:1px solid #cbd0bd}td{padding:17px 12px;max-width:300px;overflow-wrap:anywhere;border-bottom:1px solid var(--line)}td.ok{color:#536626}td.no{color:#a8381c}footer{border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:20px;margin:25px 4% 0;padding:23px 0;font-size:10px;color:var(--muted)}footer>div{display:flex;gap:15px;align-items:center}footer strong{color:var(--ink);font-size:13px}footer .text-btn{font-size:10px}.danger{color:#9d361e}.motion-paused .star{animation-play-state:paused!important}.pop{animation:pop .4s var(--ease)}@keyframes pop{50%{transform:scale(1.25)}}@keyframes rotate{to{transform:rotate(360deg)}}@keyframes enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(min-width:1700px){h1{font-size:106px}}@media(max-width:1050px){.top{padding:0 3%}.edition{display:none}main{padding:0 3%}.hero{padding:25px}.paper-scene{margin:0 -25px}.notes-panel{padding:25px 0 20px 25px}.notes-panel .actions{gap:10px}.notes-panel .primary{width:100%;justify-content:space-between}.capture-layout{min-height:650px}h1{letter-spacing:-5px;font-size:80px}.paper-stack{width:75%}.paper-question{font-size:25px}.small-panel{display:block}.small-panel h3{max-width:none}.small-panel p{margin-top:8px}.side-stack{gap:30px}.practice-panel{padding:25px}.queue-panel{padding:25px}.question{font-size:28px}.header-tools{gap:15px}.stats strong{font-size:52px}}
+@media(max-width:700px){.top{min-height:69px;padding:12px 5%;gap:10px;align-items:center}.brand{font-size:19px}.mark{width:28px;height:28px;font-size:23px}.privacy{font-size:9px}.privacy i{display:none}.header-tools{flex-direction:column;align-items:flex-end;gap:0}.header-tools .text-btn{font-size:9px;padding:5px 0}main{padding:0 5%}.steps{height:62px;gap:0;justify-content:space-between}.steps button{font-size:12px;gap:7px}.steps b{font-size:9px}.pill{font-size:10px}.steps .pill{font-size:9px;min-width:18px}#status:empty{min-height:17px}.capture-layout{display:flex;flex-direction:column;min-height:0}.hero{padding:22px 25px 12px;min-height:360px}.studio-label{font-size:8px;letter-spacing:1px}.star{font-size:28px}h1{font-size:64px;letter-spacing:-4px;margin:20px 0 12px}h1 span{padding-left:35px}.intro{font-size:12px;max-width:45%}.paper-scene{position:absolute;width:60%;height:240px;min-height:0;right:0;bottom:24px;margin:0;transform:rotate(9deg)}.paper-stack{height:173px;width:80%;transform:rotate(-12deg)}.sheet-front{padding:12px}.paper-meta{font-size:5px;letter-spacing:0;padding-bottom:7px}.paper-meta>span{display:none}.paper-question{font-size:21px;letter-spacing:-.6px}.paper-bottom{font-size:6px}.flip-icon{font-size:18px}.hero-bottom{font-size:9px}.hero .orbit{transform:scale(1.2)}.notes-panel{padding:30px 0 0}h2{font-size:31px}.notes-panel h2 br{display:none}.notes-panel>.muted{font-size:12px;max-width:none;margin-bottom:20px}textarea{min-height:230px;font-size:16px}.source-foot{font-size:9px;padding:10px 0 18px}.notes-panel .primary{width:auto;flex:1;padding:14px}.notes-panel #sample{font-size:10px}.notes-panel #import{margin-left:0;width:100%;text-align:left}.side-stack{display:block;margin-top:20px;padding-top:5px}.small-panel{padding-top:18px;margin-top:16px;border-top:1px solid var(--line)}.small-panel h3{font-size:13px;margin:0}.small-panel p{font-size:11px;margin-top:7px}.small-panel .tiny{font-size:9px}.practice-grid{display:flex;flex-direction:column}.practice-panel{padding:22px 18px}.practice-panel .section-head{gap:9px;align-items:center}.practice-panel .eyebrow{font-size:8px;letter-spacing:.6px;margin:0}.practice-panel .pill{font-size:9px;padding:4px}.question{font-size:26px;letter-spacing:-.7px;margin:28px 0;min-height:110px}.queue-panel{border-left:0;border-top:1px solid var(--line);padding:24px 18px}.queue-panel h2{font-size:25px;max-width:none}.queue-panel .muted{font-size:11px}.practice-panel .actions{gap:14px}.practice-panel .primary{font-size:11px;padding:14px}.practice-panel .text-btn{font-size:11px}#feedback{padding:17px;margin-top:25px}#verdict{font-size:16px}#expected{font-size:24px}.insights-top{display:block}.insights-top h2{font-size:29px}.insights-top .secondary{font-size:11px;margin:5px 0}.stats{grid-template-columns:1fr 1fr;margin:20px 0}.stats article{padding:20px!important;border-bottom:1px solid var(--line)}.stats article:nth-child(2){border-right:0}.stats article:nth-child(3),.stats article:nth-child(4){border-bottom:0}.stats span{font-size:9px}.stats strong{font-size:43px;letter-spacing:-2px;margin-top:15px}.grid{grid-template-columns:1fr;gap:15px}.grid>.panel{padding:22px 18px}.bar-row{gap:9px;font-size:10px}.bar-row>span{width:60px}footer{margin:20px 5% 0;flex-wrap:wrap;padding:20px 0;gap:10px}footer>div{flex:1;gap:10px}footer>div>span{display:none}footer>span{width:100%;font-size:9px}.history-panel h3{font-size:16px}}
+@media(max-width:360px){.brand{font-size:17px}.hero{padding:20px;min-height:345px}h1{font-size:58px}.intro{font-size:11px}.paper-scene{width:58%;bottom:20px}.paper-question{font-size:18px}.paper-stack{height:155px}.paper-bottom{font-size:5px}.studio-label{font-size:7px}.notes-panel .actions{gap:10px}.notes-panel .primary{font-size:11px}.source-foot{font-size:8px}.steps button{font-size:11px;gap:6px}.header-tools{max-width:111px}.privacy{font-size:8px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:700px){.hero{min-height:440px}h1{font-size:48px;line-height:1;letter-spacing:-3px;margin:18px 0 12px}h1 br{display:none}h1 span{padding-left:0}.intro{max-width:none;font-size:12px}.intro br{display:none}.paper-scene{width:86%;height:215px;left:7%;right:auto;bottom:35px;transform:none}.paper-stack{width:78%;height:184px;transform:rotate(-8deg)}.paper-question{font-size:25px}.paper-meta{font-size:6px}.paper-bottom{font-size:7px}}
+@media(max-width:360px){.hero{min-height:420px}h1{font-size:42px}.intro{font-size:11px}.paper-scene{height:205px;bottom:30px}.paper-stack{width:80%;height:171px}.paper-question{font-size:22px}.paper-bottom{font-size:6px}}
+/* V6 art direction: a sculptural memory loop, then a quiet instrument. */
+:root{--ink:#25251f;--paper:#f2f1eb;--line:#d6d6cc;--muted:#6b6b60;--orange:#ff632f;--accent:#bd3913}.top{background:#171815;color:#ecece2;border-color:#343630;min-height:90px;padding:0 5%;position:relative;z-index:3}.top .brand{font-size:25px;letter-spacing:-1.3px}.top .edition{color:#9d9f91}.top .mark{background:#ff632f}.top .privacy i{background:#c3c7a9}.top .header-tools{font-size:11px;gap:35px}.top .text-btn{font-size:11px;color:#bfc1b3;text-decoration:none;border:1px solid #41433b;padding:9px 12px;border-radius:30px}.top .text-btn:hover{background:#32352c}.landing{background:#171815;color:#f4f1e7;padding:0 5%;position:relative;overflow:hidden}.landing:after{content:'';pointer-events:none;position:absolute;inset:0;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.8' filter='url(%23n)'/%3E%3C/svg%3E")}.landing-meta{display:flex;justify-content:space-between;padding-top:29px;font-size:9px;letter-spacing:1.5px;color:#a4a697;position:relative;z-index:1}.landing-meta>span:first-child{display:flex;align-items:center;gap:10px}.landing-meta i{width:5px;height:5px;background:#ff632f;border-radius:100%}.landing-grid{display:grid;grid-template-columns:1.03fr 1fr;min-height:610px;align-items:center;position:relative;z-index:1}.landing-copy{padding:26px 0 35px;position:relative;z-index:2}.landing h1{font-size:clamp(68px,6.65vw,113px);line-height:.98;letter-spacing:-6px;font-weight:600;margin:0 0 28px;white-space:nowrap}.landing h1 span{padding:0}.outlined{-webkit-text-stroke:1px #f4f1e7;color:transparent}.landing-intro{font-size:23px;line-height:1.35;letter-spacing:-.8px;margin:0 0 19px}.landing-detail{font-size:12px;line-height:1.8;color:#a7ab9a;margin:0 0 30px}.landing-actions{display:flex;align-items:flex-start;gap:24px;flex-wrap:wrap}.launch{background:#ff632f;border:1px solid #ff632f;padding:18px 22px;color:#171815;display:flex;gap:44px;align-items:center;font-size:12px;font-weight:700;box-shadow:0 3px 0 #992c0f;transition:transform .3s var(--ease),box-shadow .3s}.launch:hover{transform:translateY(-3px);box-shadow:0 6px 0 #992c0f}.launch span{font-size:22px;line-height:1}.demo-launch{padding:19px 0;background:none;border:0;border-bottom:1px solid #757a67;color:#dfe2d2;font-size:11px}.demo-launch span{margin-left:15px}.landing-promises{display:flex;gap:15px;margin-top:24px;color:#898f7b;font-size:9px}.landing-promises>span+span:before{content:'·';margin-right:15px;color:#c1c7af}.memory-scene{height:620px;position:relative;margin:0 -20px 0 -15px;isolation:isolate;perspective:1000px}.memory-scene:before{content:'';position:absolute;width:75%;height:75%;border-radius:50%;background:radial-gradient(ellipse,#5a351c22,transparent 70%);left:15%;top:15%;z-index:-1}#memory-loop{width:100%;height:100%;display:block}.scene-axis{position:absolute;font-size:8px;letter-spacing:1.5px;color:#b7b9a7;border:1px solid #525645;background:#171815;padding:6px 10px;transform:rotate(-12deg)}.axis-a{top:16%;left:12%}.axis-b{top:35%;right:1%}.axis-c{bottom:22%;left:5%}.scene-coordinate{position:absolute;font-size:7px;letter-spacing:1.6px;right:13px;top:35px;writing-mode:vertical-rl;color:#828978}.scene-source{position:absolute;right:0;bottom:31%;padding:22px 18px;width:174px;transform:rotate(12deg);background:linear-gradient(135deg,#393b31,#1d2019);border:1px solid #686f56;box-shadow:0 10px 30px #0005;color:#c3c9b3;z-index:0}.micro{font-size:7px;letter-spacing:1.3px;color:#a0a791}.scene-source p{font-size:17px;line-height:1.3;letter-spacing:-.4px;margin:15px 0 23px}.scene-source b{font-weight:400;border-bottom:1px solid #ff7545;color:#fff}.source-corner{position:absolute;right:15px;bottom:12px;font-size:22px;color:#ff8f67}.demo-card{position:absolute;width:330px;left:46%;top:47%;transform:translate(-50%,-50%) rotate(-7deg);background:#f3f1e7;box-shadow:5px 6px 0 #b9b9a7,7px 9px 0 #414538,15px 28px 40px #0006;color:#25251f;z-index:2;transition:box-shadow .3s}.demo-card-head{display:flex;justify-content:space-between;gap:10px;font-size:7px;letter-spacing:1px;border-bottom:1px solid #c9cbbd;padding:15px 18px;color:#676c5b}.card-locator{display:flex;gap:7px;align-items:center}.card-locator i{width:5px;height:5px;background:#e45b2e;border-radius:100%}.demo-card-topic{display:block;font-size:9px;padding:23px 24px 0;color:#6b705f}.demo-card-main{display:block;width:100%;background:none;text-align:left;border:0;padding:15px 24px 21px}.demo-card-main:hover .reveal-symbol{background:var(--orange);transform:rotate(45deg)}#demo-question{display:block;font-size:34px;line-height:1.14;letter-spacing:-1.2px;min-height:97px}.demo-blank{border-bottom:1px solid #ee5e32;color:#b9421a}.demo-answer{background:#dce1c5;box-shadow:0 2px 0 #6f7e44}.demo-reveal{display:flex;align-items:center;justify-content:space-between;margin-top:21px;font-size:9px;color:#717462}.reveal-symbol{width:31px;height:31px;display:grid;place-items:center;border:1px solid #c6c9ba;border-radius:50%;font-size:18px;color:#272b20;transition:transform .4s,background .3s}.demo-card-foot{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#e6e8db;font-size:6px;letter-spacing:1px;border-top:1px solid #c9cbbd}.demo-card-foot svg{width:65px;height:18px;fill:none;stroke:#777f64;stroke-width:1}.demo-card.is-revealed{box-shadow:5px 6px 0 #9ea980,7px 9px 0 #414538,15px 28px 40px #0006}.scene-caption{position:absolute;bottom:15px;left:21%;display:flex;gap:15px;color:#929b83;font-size:9px;line-height:1.6}.scene-caption b{font-weight:400;color:#d2d9c4}.scene-plus{font-size:28px;color:#6b755f;line-height:1}.landing-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #3c4034;padding:24px 0 27px;position:relative;z-index:2}.landing-bottom>span{font-size:8px;letter-spacing:1.2px;color:#7e8971;line-height:1.7}.landing-bottom b{font-weight:400;color:#cbd3bc}.landing-bottom button{border:0;background:none;color:#bac6a6;font-size:8px;letter-spacing:1.5px;padding:10px 0}.landing-bottom button span{font-size:20px;margin-left:20px}.mini-route{display:flex;gap:0;align-items:center;width:220px}.mini-route i{border:1px solid #59654c;color:#b6c5a4;border-radius:100%;width:28px;height:28px;display:grid;place-items:center;font-size:8px;font-style:normal}.mini-route i:first-child{border-color:#d8673c;color:#ff875a}.mini-route span{height:1px;background:#414b37;flex:1}.workspace-mode .landing{display:none}.workspace-mode .top{background:var(--paper);color:var(--ink);border-color:var(--line);min-height:80px}.workspace-mode .top .text-btn{color:#666c5b;border-color:#c6ccbc}.workspace-mode .top .edition{color:#7c8172}.workspace-mode .top .privacy i{background:#5b674c}main{max-width:1600px;padding:0 5%}.steps{height:82px;gap:40px}.steps b{font-size:10px}.steps button{font-size:13px}.capture-layout{grid-template-columns:.8fr 1.2fr;gap:70px;min-height:620px;padding-top:45px;scroll-margin-top:25px}.workbench-heading{display:flex;flex-direction:column}.section-index{font-size:9px;letter-spacing:1.5px;color:#737b67;display:block;margin-bottom:35px}.workbench-heading h2{font-size:48px;font-weight:500;line-height:1.04;letter-spacing:-2.5px}.workbench-heading>p{font-size:13px;line-height:1.7;color:#737969;margin:0}.capture-drawing{width:210px;height:150px;fill:none;stroke:#8f9880;stroke-width:1;transform:rotate(-8deg);margin:35px 0 30px 20px}.bench-foot{font-size:8px;line-height:1.9;letter-spacing:1.4px;color:#949d87;margin-top:auto}.notes-panel{border:1px solid #ced2c4;background:#e8eadf;padding:29px;min-width:0;box-shadow:0 3px 0 #d8ddcc}.editor-title{font-size:25px;line-height:1.2;letter-spacing:-1px;margin:0 0 12px;font-weight:500}.notes-panel .eyebrow{font-size:8px;letter-spacing:1.5px}.notes-panel>.muted{font-size:11px;margin-bottom:20px;max-width:470px;line-height:1.7}textarea{background:#f6f5ee;min-height:265px;border-color:#d4d7c9;padding:20px;font-size:14px;line-height:1.8;resize:vertical;color:#424938}textarea::placeholder{color:#939c84}.source-foot{font-size:9px;color:#737d65;padding:13px 0 23px}.notes-panel .primary{background:#282f21;box-shadow:0 2px 0 #858e75;padding:16px 20px}.notes-panel .primary:hover{background:#48533b}.notes-panel #sample{font-size:10px}.notes-panel #import{font-size:10px}.notes-panel .actions{gap:18px}.side-stack{margin:55px 0 40px;gap:70px;padding-top:30px}.small-panel{display:grid;grid-template-columns:30px 1fr 1.3fr;gap:12px 20px}.principle-index{font-size:9px;color:#8c967e}.small-panel h3{font-size:16px;font-weight:500;line-height:1.3;letter-spacing:-.4px;max-width:180px}.small-panel p{font-size:10px}.small-panel .tiny{grid-column:3;font-size:8px}.workspace-title{display:flex;align-items:center;gap:30px;margin:15px 0 30px}.workspace-title .section-index{margin:0}.workspace-title h2{font-size:37px;margin:0;letter-spacing:-1.5px}.workspace-title p{font-size:11px;color:#7b8370;margin-left:auto}.practice-grid{grid-template-columns:1.75fr 1fr;border-color:#c8cfbc;box-shadow:0 3px 0 #dce1d1}.practice-panel{padding:34px 40px;background:#f9f8f1}.practice-panel>.section-head{align-items:center;border-bottom:1px solid #e1e4d7;padding-bottom:22px}.practice-panel .eyebrow{margin:0;font-size:8px;letter-spacing:1.3px}.practice-panel .pill{font-size:9px;padding:6px 9px;border-color:#d0d7c4;background:#eff2e6}.question{font-size:36px;line-height:1.4;margin:35px 0 38px;min-height:120px;letter-spacing:-1.3px}.queue-panel{background:#20271b;color:#e2e7d8;border-color:#3c4833;padding:34px 30px}.queue-panel .eyebrow{color:#9da98d;font-size:8px;letter-spacing:1.5px}.queue-panel h2{font-size:30px;letter-spacing:-1.5px}.queue-panel .muted{color:#9da98e;font-size:10px;line-height:1.8}.queue-panel .route-map{border-color:#445137;background:#2a3323;margin:25px -10px;padding:0 8px}.route-path{stroke:#647452}.route-node .dot{fill:#2c3823;stroke:#94a780}.route-node text{fill:#adbf98}.route-node.current .dot{fill:#ff8959;stroke:#ffbc95}.route-node.current .halo{stroke:#ff8e4944}.route-node.recalled .dot{fill:#b9ce87;stroke:#b9ce87}.route-node.missed .dot,.route-node.confmiss .dot{fill:#ff8252;stroke:#ff8252}#queue li{border-color:#3a4630;font-size:11px;gap:18px;padding:15px 0}#queue li>span:first-child{color:#8d9c7d;font-size:9px}#queue small{color:#94a481;font-size:9px}#queue .st-confmiss,#queue .st-miss{color:#f39b72!important}#queue .st-ok{color:#c2d699!important}.queue-note{color:#8d9c7e;font-size:9px;margin-top:25px}.practice-panel label{font-size:10px;letter-spacing:.4px}.practice-panel input[type=text]{background:#f0f2e8;border-color:#c5ceba;padding:17px;font-size:16px}.confidence-head{margin-top:28px}input[type=range]{margin:25px 0 17px}.practice-panel .actions{margin-top:30px}.practice-panel .primary{background:#282f21;border-color:#282f21;padding:16px 20px;font-size:12px}.practice-panel .text-btn{font-size:11px}.insights-top{align-items:flex-end;margin-top:20px;margin-bottom:30px}.insights-top .eyebrow{font-size:8px;letter-spacing:1.5px}.insights-top h2{font-size:54px;line-height:1.04;letter-spacing:-2.8px;margin-bottom:20px}.insights-top .muted{font-size:11px}.insights-top .secondary{font-size:11px;margin-bottom:20px}.signal-strip{display:flex;align-items:center;gap:25px;background:#282f21;color:#e0e5d3;padding:25px 30px}.signal-mark{width:53px;height:53px;border:1px solid #697955;border-radius:50%;display:grid;place-items:center;font-size:28px;color:#dd8056}.signal-strip p{font-size:16px;line-height:1.5;letter-spacing:-.3px;margin:0}.signal-strip p span{font-size:10px;letter-spacing:0;color:#a0af8c}.signal-strip svg{width:210px;height:65px;margin-left:auto;fill:none;stroke-width:1.5}.signal-recall{stroke:#b5c995}.signal-confidence{stroke:#e7956d;stroke-dasharray:4 4}.stats{margin:0 0 35px;border-top:0}.stats article{padding:28px;border-color:#cdd4c0}.stats article:first-child{padding-left:20px}.stats strong{font-size:65px;font-weight:400;letter-spacing:-3px;line-height:1.1;color:#344329;margin-top:25px}.stats span{font-size:10px;letter-spacing:.2px}.grid>.panel{background:#e6eadc;border:1px solid #d2d9c4;padding:29px}.grid>.panel h3{font-size:20px;font-weight:500;margin-bottom:15px}.grid>.panel .muted{font-size:11px}.bar{height:5px}.bar-row{margin:27px 0;font-size:10px}.history-panel{padding:40px 0}.history-panel h3{font-weight:500;font-size:23px}.history-panel th{padding:20px 15px;font-size:9px}.history-panel td{font-size:11px;padding:20px 15px}.closing-note{margin-top:40px;border-top:1px solid #d6d9cd;padding:60px 5%;display:flex;align-items:center;justify-content:space-between;background:#e5e8da}.closing-note>span{font-size:8px;letter-spacing:1.5px;color:#7d896e}.closing-note p{margin:0;font-size:44px;line-height:1.1;letter-spacing:-2px;color:#657554}.closing-note b{font-weight:400;color:#28321f}.workspace-mode+.closing-note{display:none}.workspace-mode .closing-note{display:none}footer{margin-top:0;border:0;padding:25px 0}.workspace-mode footer{border-top:1px solid var(--line);margin-top:35px}.workspace-mode~.closing-note{display:none}
+@media(min-width:1700px){.landing-grid{min-height:710px}.memory-scene{height:710px}.landing h1{font-size:112px}.demo-card{width:375px}#demo-question{font-size:40px}.landing-detail{font-size:14px}.landing-intro{font-size:27px}}
+@media(max-width:1150px){.landing-grid{grid-template-columns:1.08fr 1fr;min-height:590px}.landing h1{font-size:7vw;letter-spacing:-4.5px}.landing-actions{gap:18px}.demo-launch{padding:4px 0 10px}.memory-scene{height:540px;margin-right:-35px}.demo-card{width:285px;left:48%}#demo-question{font-size:29px}.scene-source{width:143px;padding:15px;right:-2%;bottom:28%}.scene-source p{font-size:15px}.scene-caption{left:13%;bottom:-5px}.landing-copy{padding-right:10px}.landing-detail{font-size:11px}.capture-layout{gap:40px}.workbench-heading h2{font-size:41px}.notes-panel{padding:25px}.small-panel{display:block}.principle-index{display:block;margin-bottom:15px}.small-panel h3{max-width:none}.small-panel p{margin-top:10px}.small-panel .tiny{margin-top:10px}.workspace-title{gap:22px;flex-wrap:wrap}.workspace-title p{width:100%;margin:0}.stats strong{font-size:55px}}
+@media(max-width:700px){.top{padding:19px 6%;min-height:76px}.top .brand{font-size:20px}.top .edition{display:none}.top .header-tools{gap:8px;flex-direction:row}.top .privacy{display:none}.top .text-btn{font-size:8px;padding:8px 10px}.landing{padding:0 6%}.landing-meta{padding-top:20px;font-size:6.5px;letter-spacing:1.2px}.landing-meta>span:last-child{display:none}.landing-grid{display:block;min-height:0}.landing-copy{padding:30px 0 0}.landing h1{font-size:clamp(43px,11.7vw,73px);line-height:1.04;letter-spacing:-2.8px;margin:0 0 22px}.landing h1 br{display:initial}.landing-intro{font-size:18px;letter-spacing:-.5px;margin:0 0 15px}.landing-detail{font-size:10px;line-height:1.8;margin:0 0 22px}.landing-detail br{display:none}.landing-actions{gap:20px;align-items:center;flex-wrap:wrap}.launch{font-size:10px;padding:14px 15px;gap:18px}.launch span{font-size:19px}.demo-launch{font-size:9px;padding:12px 0}.demo-launch span{margin-left:6px}.landing-promises{gap:10px;margin-top:19px;font-size:7px}.landing-promises>span+span:before{margin-right:10px}.memory-scene{height:450px;margin:14px -12px 0}.demo-card{width:263px;left:45%;top:47%}.demo-card-head{font-size:6px;padding:13px 15px}.demo-card-main{padding:15px 19px 18px}.demo-card-topic{padding:20px 19px 0;font-size:8px}#demo-question{font-size:29px;min-height:83px}.demo-reveal{font-size:8px;margin-top:16px}.demo-card-foot{font-size:5.5px;padding:10px 15px}.scene-source{right:-1%;bottom:25%;width:125px;padding:12px}.scene-source .micro{font-size:6px}.scene-source p{font-size:13px;margin-bottom:20px}.scene-coordinate{font-size:6px;right:0;top:15px}.scene-axis{font-size:6px;letter-spacing:1px;padding:5px 7px}.axis-a{left:4%;top:12%}.axis-b{right:1%;top:28%}.axis-c{left:2%;bottom:17%}.scene-caption{left:17%;bottom:4px;font-size:7px;gap:10px}.scene-plus{font-size:22px}.landing-bottom{padding:20px 0;margin-top:12px}.landing-bottom>span{font-size:6px;letter-spacing:.9px}.mini-route{width:110px}.mini-route i{width:21px;height:21px;font-size:6px}.landing-bottom button{font-size:0}.landing-bottom button span{font-size:23px;margin-left:0}main{padding:0 6%}.steps{height:70px;gap:0}.steps button{font-size:11px}.steps b{font-size:9px}.workspace-mode .top{min-height:70px}.capture-layout{padding-top:15px;gap:0;min-height:0}.section-index{font-size:8px;margin-bottom:22px}.workbench-heading h2{font-size:37px;letter-spacing:-1.7px;margin-bottom:18px}.workbench-heading>p{font-size:11px}.capture-drawing{display:none}.bench-foot{display:none}.notes-panel{padding:22px 18px;margin-top:30px}.editor-title{font-size:22px;letter-spacing:-.8px}.notes-panel>.muted{font-size:10px;margin-bottom:20px}.notes-panel .eyebrow{font-size:7px}.notes-panel textarea{font-size:16px;min-height:280px;padding:15px;line-height:1.7}.source-foot{font-size:8px;padding:12px 0 20px}.notes-panel .actions{gap:18px 12px}.notes-panel .primary{padding:14px;font-size:10px;gap:15px}.notes-panel #sample{font-size:9px}.notes-panel #import{font-size:9px;margin-left:0}.side-stack{margin:30px 0;padding-top:0;border:0}.small-panel{border-top:1px solid #d3d9c9;padding:22px 0;margin:0}.principle-index{float:left;margin:0 20px 45px 0;font-size:8px}.small-panel h3{font-size:16px;margin-bottom:10px}.small-panel p{font-size:10px;margin-left:30px}.small-panel .tiny{font-size:8px;margin-left:30px}.workspace-title{gap:13px;margin:12px 0 25px}.workspace-title .section-index{width:100%;font-size:7px}.workspace-title h2{font-size:32px;letter-spacing:-1.4px}.workspace-title p{font-size:10px;line-height:1.5}.practice-panel{padding:23px 18px}.practice-panel>.section-head{padding-bottom:18px;gap:8px}.practice-panel .eyebrow{font-size:7px;letter-spacing:.5px}.practice-panel .pill{font-size:8px;padding:5px 7px}.question{font-size:28px;line-height:1.45;min-height:100px;margin:29px 0}.practice-panel label{font-size:9px}.practice-panel input[type=text]{padding:15px;font-size:16px}.practice-panel .actions{gap:18px;margin-top:25px}.practice-panel .primary{font-size:10px;padding:14px 12px}.practice-panel .text-btn{font-size:10px}.queue-panel{padding:28px 21px}.queue-panel h2{font-size:29px}.queue-panel .eyebrow{font-size:7px}.queue-panel .muted{font-size:10px}.route-node text{font-size:9px}#queue li{font-size:11px}.insights-top{margin-top:15px}.insights-top h2{font-size:42px;letter-spacing:-2px}.insights-top .eyebrow{font-size:7px;line-height:1.8}.insights-top .muted{font-size:10px}.insights-top .secondary{font-size:10px;margin-bottom:0}.signal-strip{padding:20px;gap:14px;flex-wrap:wrap}.signal-mark{width:35px;height:35px;font-size:21px}.signal-strip p{font-size:13px;max-width:calc(100% - 50px)}.signal-strip p span{display:block;font-size:9px;margin-top:7px}.signal-strip svg{width:100%;height:55px;margin-top:10px}.stats{margin:0 0 25px}.stats article{padding:25px 15px!important}.stats span{font-size:9px;line-height:1.5}.stats strong{font-size:43px;letter-spacing:-2px;margin-top:18px}.grid>.panel{padding:24px 20px}.grid>.panel h3{font-size:19px}.grid>.panel .muted{font-size:10px}.grid>.panel .secondary{font-size:10px;padding:14px}.closing-note{padding:35px 6%;margin-top:15px;display:block}.closing-note>span{font-size:7px}.closing-note p{font-size:34px;margin:20px 0 24px;letter-spacing:-1.4px}footer{margin:0 6%;padding:25px 0}.workspace-mode footer{margin-top:25px}}
+@media(max-width:360px){.top .brand{font-size:18px}.top .text-btn{font-size:7px;padding:8px}.landing h1{font-size:43px;letter-spacing:-2.7px}.landing-actions{gap:12px}.launch{font-size:9px;gap:14px;padding:13px 12px}.demo-launch{font-size:8px}.landing-promises{font-size:6px}.memory-scene{height:415px}.demo-card{width:230px;left:46%}#demo-question{font-size:26px}.demo-card-head{font-size:5px}.scene-source{width:107px;font-size:10px}.scene-source p{font-size:12px}.demo-card-topic{font-size:7px}.scene-axis{font-size:5px}.scene-caption{font-size:6.5px;left:13%}.landing-bottom>span{font-size:5px}.workbench-heading h2{font-size:33px}.notes-panel{padding:20px 15px}.editor-title{font-size:20px}.notes-panel .actions{gap:13px 9px}.notes-panel .primary{font-size:9px;padding:13px 11px}.notes-panel #sample{font-size:8px}.source-foot{font-size:6.5px}.workspace-title h2{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.launch:hover{transform:none}.demo-card-main:hover .reveal-symbol{transform:none}}
+/* Neutral instrument surfaces: burnt ink, warm grey, orange signal. */
+:root{--muted:#6d6a61}.queue-panel{background:#272620;color:#ebe7dc;border-color:#4e4a3f}.queue-panel .eyebrow,.queue-panel .muted{color:#b0a99a}.queue-panel .route-map{background:#302e26;border-color:#5b5548}.route-path{stroke:#817765}.route-node .dot{fill:#363228;stroke:#b4a78d}.route-node text{fill:#c3b69c}.route-node.recalled .dot{fill:#c6c49f;stroke:#c6c49f}#queue li{border-color:#4a4438}#queue li>span:first-child,#queue small,.queue-note{color:#b3a894}#queue .st-ok{color:#d7d3aa!important}.notes-panel{background:#e9e6dc;border-color:#d0cabe;box-shadow:0 3px 0 #d8d2c5}.notes-panel textarea{background:#f9f7f0;border-color:#d4cfc2;color:#454136}.notes-panel textarea::placeholder{color:#8c877a}.notes-panel .primary,.practice-panel .primary{background:#2d2a23;border-color:#2d2a23;box-shadow:0 2px 0 #928878}.notes-panel .primary:hover,.practice-panel .primary:hover{background:#50493a}.notes-panel .eyebrow,.workbench-heading>p,.section-index,.source-foot{color:#777061}.capture-drawing{stroke:#9c8e77}.bench-foot{color:#9d927f}.small-panel p,.small-panel .tiny{color:#777061}.small-panel,.side-stack{border-color:#d6cfc1}.principle-index{color:#958977}.practice-panel input[type=text]{background:#f2eee5;border-color:#d0c7b6}.practice-panel .pill{background:#efede4;border-color:#d4cebd}.practice-grid{border-color:#d0c7b6;box-shadow:0 3px 0 #ddd7c8}.practice-panel{background:#faf8f1}.signal-strip{background:#2b2922;color:#e9e4d7}.signal-mark{border-color:#756a56;color:#f19b70}.signal-strip p span{color:#b2a68f}.signal-recall{stroke:#d0c6a1}.signal-confidence{stroke:#ed9b72}.stats strong{color:#413a2d}.stats article{border-color:#d5cdbd}.grid>.panel{background:#e9e5d9;border-color:#d8d0be}.bar{background:#d7cebb}.bar i{background:#6a624d}.closing-note{background:#e7e0d1;border-color:#d8ceba}.closing-note p{color:#89785c}.closing-note b{color:#3c3221}.closing-note>span{color:#92846c}.signal-strip svg{opacity:.8}.queue-panel .route-map svg{background:transparent}
+.signal-art{display:flex;align-items:center;gap:15px;margin-left:auto;color:#d0c6a1;font-size:9px;letter-spacing:2px}.signal-art i{font-size:46px;line-height:1;color:#ed9b72;font-style:normal;font-weight:300}.signal-art span{border:1px solid #756a56;width:55px;height:55px;display:grid;place-items:center;border-radius:50%}
+@media(max-width:700px){.top .text-btn{min-height:40px}.landing-detail{font-size:12px}.landing-promises{font-size:8px}.demo-launch{font-size:11px;min-height:44px}.landing-actions{gap:15px}.memory-scene{height:490px;margin:14px 0 0}.demo-card{left:49%;top:40%;width:263px}.scene-source{transform:none;bottom:43px;right:8%;width:210px;padding:12px 15px;height:73px}.scene-source p{font-size:13px;margin:9px 0 0;line-height:1}.scene-source p br{display:none}.scene-source .micro{font-size:6.5px}.scene-source p br:after{content:' '}.source-corner{bottom:13px;font-size:17px}.scene-caption{bottom:0;left:12%}.scene-coordinate{right:-5px}.axis-a{left:0;top:5%}.axis-b{right:0;top:19%}.axis-c{left:0;bottom:24%}.signal-art{width:100%;justify-content:center;margin-top:6px}.landing-promises>span+span:before{margin-right:8px}.landing-promises{gap:8px}}
+@media(max-width:360px){.landing-actions{gap:12px}.demo-launch{font-size:9px}.memory-scene{height:455px}.demo-card{width:230px;left:48%;top:39%}.scene-source{right:4%;width:195px}.landing-promises{font-size:7px}}
+/* v6.1: legible instrument labels, including small annotations. */
+:root{--muted:#625f55}.workspace-mode .top .edition,.workspace-mode .top .text-btn{color:#625f55}.notes-panel .eyebrow,.workbench-heading>p,.section-index,.source-foot,.bench-foot,.principle-index,.small-panel p,.small-panel .tiny,.workspace-title p,footer,footer>span,.stats span,.range-labels,.history-panel th{color:#625f55}.notes-panel textarea::placeholder{color:#6c6659;opacity:1}.notes-panel .eyebrow,.section-index,.source-foot,.bench-foot,.principle-index,.small-panel .tiny,.workspace-title .section-index,.practice-panel .eyebrow,.practice-panel .pill,.insights-top .eyebrow,.history-panel th{font-size:10px}.closing-note p{color:#74634b}.closing-note>span{color:#6a5d49;font-size:10px}.top .edition{color:#b3b5a6}.landing-detail{color:#b3b6a8}.landing-meta{color:#b2b5a5;font-size:9px}.landing-promises{color:#a7ad99;font-size:9px}.scene-caption{color:#a8b29b;font-size:9px}.scene-coordinate{color:#a7b198;font-size:9px}.scene-axis{font-size:9px;color:#bac3ac}.landing-bottom>span{color:#a7b397;font-size:9px}.landing-bottom button{font-size:9px;color:#b9c6a7}.mini-route i{font-size:9px}.demo-card-head{font-size:9px;color:#5e6254;letter-spacing:.5px}.demo-card-topic{font-size:10px;color:#5d6253}.demo-reveal{font-size:10px;color:#5d6253}.demo-card-foot{font-size:9px;color:#535b45;letter-spacing:.5px}.scene-source .micro{font-size:9px;color:#bbc3aa}.demo-card-foot svg{width:50px}.signal-strip p span{font-size:11px}.queue-panel .eyebrow{font-size:10px}.queue-note{font-size:10px}.signal-art{font-size:9px}
+@media(max-width:700px){.top .text-btn{font-size:10px}.landing-meta{font-size:9px;letter-spacing:.8px}.landing-promises{font-size:9px;gap:7px;flex-wrap:wrap}.landing-promises>span+span:before{margin-right:7px}.demo-card-head{font-size:8px;padding:13px 12px}.demo-card-foot{font-size:8px;padding:10px 12px}.scene-coordinate{font-size:9px;right:-10px;letter-spacing:1px}.scene-axis{font-size:9px;letter-spacing:.3px;padding:5px}.scene-caption{font-size:9px;left:4%;bottom:0}.scene-source{bottom:53px;height:80px}.scene-source .micro{font-size:9px}.scene-source p{font-size:13px}.axis-c{bottom:27%}.landing-bottom>span{font-size:9px;letter-spacing:0;max-width:110px}.landing-bottom button{font-size:0}.mini-route{width:100px}.mini-route i{font-size:9px;width:24px;height:24px}.notes-panel>.muted,.small-panel p,.workspace-title p,.insights-top .muted,.grid>.panel .muted{font-size:12px}.notes-panel #sample,.notes-panel #import{font-size:10px}.notes-panel .primary{font-size:11px}.source-foot{font-size:9px}.small-panel .tiny{font-size:10px}.practice-panel .eyebrow{font-size:9px;letter-spacing:.4px}.practice-panel .pill,.practice-panel label,.stats span{font-size:10px}.section-index,.workspace-title .section-index,.insights-top .eyebrow{font-size:10px}.landing-detail{font-size:12px}.demo-launch{font-size:10px}}
+@media(max-width:360px){.demo-card-head{font-size:7px}.demo-card-foot{font-size:7px;letter-spacing:.2px}.demo-card-topic{font-size:9px}.demo-reveal{font-size:9px}.demo-card-foot svg{width:35px}.landing-promises{font-size:8px}.scene-coordinate{display:none}.source-foot{font-size:9px}.scene-caption{left:0;font-size:8px}.scene-source{bottom:48px}}
+@media(max-width:700px){.demo-card-head,.demo-card-foot{font-size:9px;letter-spacing:.1px}.landing-promises,.scene-caption{font-size:9px}.scene-caption{left:0;gap:6px}.scene-caption br{display:none}.scene-caption>span:last-child{max-width:240px}} 
+.scene-plus{color:#a7b397}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#workspace">Skip to workspace</a>
+<canvas id="topo" aria-hidden="true" hidden></canvas>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<header class="top">
+  <a class="brand" href="#"><span class="mark" aria-hidden="true">↱</span>RecallRoute<span class="edition"> / Study studio</span></a>
+  <div class="header-tools"><span class="privacy"><i></i>Local-first · No API keys</span><button id="motion-toggle" class="text-btn" aria-pressed="false">Pause motion</button></div>
+</header>
+<section class="landing" aria-label="RecallRoute, a different way back to your notes">
+  <div class="landing-meta"><span><i></i> THE ACTIVE RECALL STUDIO</span><span>YOUR WORDS. NO INVENTED ANSWERS.</span></div>
+  <div class="landing-grid">
+    <div class="landing-copy">
+      <h1>Your mind.<br>Off <span class="outlined">autopilot.</span></h1>
+      <p class="landing-intro">Rereading feels familiar.<br>Remembering feels different.</p>
+      <p class="landing-detail">Make questions from your own notes. Try the answer. <br>Find what needs another pass. Follow your route back.</p>
+      <div class="landing-actions"><button id="start-capture" class="launch">Put your notes to work <span>↗</span></button><button id="hero-sample" class="demo-launch">Take the example route <span>→</span></button></div>
+      <div class="landing-promises"><span>No sign-up</span><span>No API credits</span><span>Nothing leaves this tab</span></div>
+    </div>
+    <div class="memory-scene" id="paper-scene">
+      <canvas id="memory-loop" aria-hidden="true"></canvas>
+      <span class="scene-axis axis-a" aria-hidden="true">CAPTURE</span><span class="scene-axis axis-b" aria-hidden="true">RECALL</span><span class="scene-axis axis-c" aria-hidden="true">REVISIT</span>
+      <span class="scene-coordinate" aria-hidden="true">A LOOP WORTH GETTING INTO.</span>
+      <div class="scene-source" aria-hidden="true"><span class="micro">THE SOURCE / L02</span><p>The library opens <br>at <b>9 AM.</b></p><span class="source-corner">↘</span></div>
+      <div class="demo-card" id="paper-stack">
+        <div class="demo-card-head"><span class="card-locator"><i></i> RECALL EXPERIMENT</span><span>01 / 01</span></div>
+        <span class="demo-card-topic">Start with what you know.</span>
+        <button id="demo-flip" class="demo-card-main" aria-pressed="false" aria-label="Reveal the example answer"><span id="demo-question">The library<br>opens at <span class="demo-blank">_____.</span></span><span class="demo-reveal"><span id="demo-hint">Think first. Then reveal.</span><span class="reveal-symbol">↗</span></span></button>
+        <div class="demo-card-foot"><span>SOURCE-LINKED, ALWAYS.</span><svg viewBox="0 0 67 18" aria-hidden="true"><path d="M2 14C12 14 6 3 20 3S27 14 38 14 45 3 65 3"/><circle cx="65" cy="3" r="2"/></svg></div>
+      </div>
+      <div class="scene-caption"><span class="scene-plus">+</span><span>A small experiment in remembering.<br><b>Tap the card. See what comes back.</b></span></div>
+    </div>
+  </div>
+  <div class="landing-bottom"><span>READ LESS ON REPEAT.<br><b>RECALL MORE ON PURPOSE.</b></span><div class="mini-route" aria-hidden="true"><i>01</i><span></span><i>02</i><span></span><i>03</i></div><button id="scroll-capture" aria-label="Scroll to your notes">SCROLL TO BEGIN <span>↓</span></button></div>
+</section>
+<main id="workspace">
+  <nav class="steps" aria-label="Workspace">
+    <button class="active" data-view="notes"><b>01</b> Capture</button>
+    <button data-view="practice"><b>02</b> Recall <span id="card-count" class="pill">0</span></button>
+    <button data-view="insights"><b>03</b> Reflect</button>
+    <span class="steps-indicator" id="steps-indicator"></span>
+  </nav>
+  <p id="status" role="status" aria-live="polite"></p>
+
+  <section id="notes-view" class="view on">
+    <div class="capture-layout" id="capture-workbench"><div class="workbench-heading"><span class="section-index">01 / CAPTURE</span><h2>Start with a thought.<br>Leave with a route.</h2><p>Your notes are the raw material.<br>We'll keep the source attached.</p><svg class="capture-drawing" viewBox="0 0 220 150" aria-hidden="true"><path d="M20 120Q40 110 48 40L136 21 126 110 42 130ZM48 40 136 21M62 59 117 46M60 74 108 64M55 90 99 79M150 53Q207 57 185 110M168 101 185 116 201 100"/><circle cx="153" cy="52" r="4"/></svg><span class="bench-foot">01. CAPTURE<br>02. RECALL<br>03. REFLECT</span></div>
+      <article class="panel notes-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">YOUR SOURCE MATERIAL</p>
+            <h3 class="editor-title">What are we learning today?</h3>
+          </div>
+
+        </div>
+        <p class="muted">Paste a few facts, one per line. We'll make blanks to test what comes back, with the source kept beside every answer.</p>
+        <label class="sr-only" for="source">Your study notes</label>
+        <textarea id="source" maxlength="24000" spellcheck="false" placeholder="Start typing or paste your notes...&#10;&#10;The library opens at 9 AM.&#10;Each member may borrow 4 books.&#10;&#10;Your words. Your source. Your practice."></textarea>
+        <div class="source-foot"><span id="char-count">0 / 24,000 characters</span><span>40 cards max</span></div>
+        <div class="actions">
+          <button id="generate" class="primary">Build my route <span>↗</span></button>
+          <button id="sample" class="text-btn">Try example notes</button>
+          <button id="import" class="secondary">Import session</button>
+          <input id="import-file" type="file" accept="application/json,.json" hidden>
+        </div>
+      </article>
+    </div>
+      <aside class="side-stack" aria-label="How this works">
+        <div class="panel small-panel tint"><span class="principle-index">01</span>
+          <span class="small-icon" aria-hidden="true">↳</span>
+          <h3>Your source stays the source.</h3>
+          <p>Cards are created by extracting words or numbers, not by inventing explanations. Each answer keeps its original line.</p>
+        </div>
+        <div class="panel small-panel"><span class="principle-index">02</span>
+          <h3>Honest about the limits</h3>
+          <p>This is a study aid, not an answer authority. Blanks can be awkward. Exact text matching can mark a valid paraphrase wrong.</p>
+          <p class="tiny">Deterministic extraction. No runtime model, account or external service.</p>
+        </div>
+      </aside>
+  </section>
+
+  <section id="practice-view" class="view" hidden>
+    <div class="workspace-title"><span class="section-index">02 / RECALL</span><h2>Let it come back.</h2><p>No peeking. Try the answer, then check your source.</p></div>
+    <div class="practice-grid">
+      <article class="panel practice-panel">
+        <div class="section-head">
+          <p class="eyebrow">Recall, before you reveal</p>
+          <span id="line-badge" class="pill">Source line</span>
+        </div>
+        <div id="empty-practice">
+          <h2>Your practice starts with your notes.</h2>
+          <p class="muted">Make a few cards first. The library example is a safe place to try.</p>
+          <button class="secondary" id="back-notes">Go to notes →</button>
+        </div>
+        <div id="practice-content" hidden>
+          <p id="prompt" class="question"></p>
+          <label for="answer">Fill the blank</label>
+          <input id="answer" type="text" autocomplete="off" placeholder="Try to recall the missing text">
+          <div class="confidence-head">
+            <label for="confidence">How sure are you?</label>
+            <output id="confidence-value" for="confidence">50%</output>
+          </div>
+          <input id="confidence" type="range" min="0" max="100" step="5" value="50">
+          <div class="range-labels"><span>A guess</span><span>Quite sure</span></div>
+          <div class="actions">
+            <button id="check" class="primary">Check against source</button>
+            <button id="skip" class="text-btn">Skip for now</button>
+          </div>
+          <div id="feedback" role="status" hidden>
+            <p id="verdict"></p>
+            <p class="answer-label">Source answer</p>
+            <strong id="expected"></strong>
+            <blockquote id="evidence"></blockquote>
+            <p id="reflection" class="muted"></p>
+            <button id="next" class="primary">Next card <span>→</span></button>
+          </div>
+        </div>
+      </article>
+      <aside class="panel queue-panel">
+        <p class="eyebrow">Your route</p>
+        <h2>What needs another look</h2>
+        <p class="muted">Missed answers come first. High-confidence misses get extra attention. New cards follow.</p>
+        <div class="route-map" id="route-map"></div>
+        <ol id="queue"></ol>
+        <div class="queue-note">This is a simple priority rule, not a validated spaced-repetition algorithm.</div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="insights-view" class="view" hidden>
+    <div class="insights-top">
+      <div>
+        <p class="eyebrow">03 / REFLECT, NOT A GRADE</p>
+        <h2>A little more<br>self-awareness.</h2>
+        <p class="muted">Only this session. Small samples are noisy, and exact-match scoring is limited.</p>
+      </div>
+      <button id="export-csv" class="secondary">Export attempts CSV ↗</button>
+    </div>
+    <div class="signal-strip"><div class="signal-mark" aria-hidden="true">↗</div><p>Feeling sure isn't the same as being right.<br><span>Look for the gap. That's your next place to practice.</span></p><div class="signal-art" aria-hidden="true"><span>SURE</span><i>≠</i><span>RIGHT</span></div></div>
+    <div class="stats">
+      <article><span>Attempts</span><strong id="stat-attempts">0</strong></article>
+      <article><span>Exact-match recall</span><strong id="stat-accuracy">—</strong></article>
+      <article><span>Average confidence</span><strong id="stat-confidence">—</strong></article>
+      <article><span>High-confidence misses</span><strong id="stat-misses">0</strong></article>
+    </div>
+    <div class="grid">
+      <article class="panel">
+        <h3>The confidence gap</h3>
+        <p class="muted" id="gap-text">Practice a card to see your first signal.</p>
+        <div class="bar-row"><span>Recall</span><div class="bar"><i id="accuracy-bar"></i></div><b id="accuracy-label">0%</b></div>
+        <div class="bar-row"><span>Confidence</span><div class="bar light"><i id="confidence-bar"></i></div><b id="confidence-label">0%</b></div>
+      </article>
+      <article class="panel">
+        <h3>Keep a useful record</h3>
+        <p class="muted">Download a session to resume later. Files contain your source notes and answers. Share them only if you mean to.</p>
+        <button id="export-session" class="secondary">Download session JSON ↗</button>
+      </article>
+    </div>
+    <article class="panel history-panel">
+      <h3>Recent attempts</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Source</th><th>Expected answer</th><th>Your answer</th><th>Recall</th><th>Confidence</th></tr></thead>
+          <tbody id="history"></tbody>
+        </table>
+      </div>
+    </article>
+  </section>
+</main>
+<div class="closing-note"><span>NOT MORE NOTES.</span><p>More moments of<br><b>"I've got this."</b></p><span>THAT'S THE IDEA.</span></div>
+<footer>
+  <div><strong>RecallRoute</strong><span>Recall. Check. Revisit.</span></div>
+  <button id="clear" class="text-btn danger">Clear this session</button>
+  <span>Notes stay in this tab. Refreshing clears them.</span>
+</footer>
+<script type="module">
 const MAX_SOURCE = 24000;
 const SAMPLE = `Community library pilot\nThe library pilot opens on Saturday at 9 AM.\nVolunteers will sort 60 donated books before opening.\nThe quiet reading room has 12 seats.\nBorrowers may keep a book for 14 days.\nThe repair desk checks damaged covers before books return to the shelf.\nThe pilot ends with a feedback circle at 4 PM.\nThe next planning meeting takes place on Tuesday.`;
 const STOP = new Set('the a an and or but in on at to of for with is are was were be been this that it its as by from will may has have before after then than into'.split(' '));
 function splitSource(text) {
   if (typeof text !== 'string' || !text.trim()) throw new Error('Add a few lines of notes first.');
   if (text.length > MAX_SOURCE) throw new Error(`Keep notes under ${MAX_SOURCE.toLocaleString()} characters.`);
-  return text.split(/\n+/).map(s => s.trim()).filter(Boolean).map((s,i)=>({line:i+1,text:s}));
+  return text.split('\n').map((s,i)=>({line:i+1,text:s.trim()})).filter(row=>row.text);
 }
 function makeCards(text) {
   const rows=splitSource(text), cards=[];
@@ -60,7 +263,7 @@ function validateImport(data) {
   const cards=makeCards(data.source), ids=new Set(cards.map(c=>c.id));
   if(!Array.isArray(data.history)||data.history.length>10000) throw new Error('Invalid or oversized practice history.');
   const history=data.history.map(h=>{
-    if(!h||!ids.has(h.cardId)||typeof h.correct!=='boolean'||typeof h.given!=='string'||h.given.length>1000||!Number.isFinite(h.confidence)||h.confidence<0||h.confidence>100||!Number.isFinite(h.ts)) throw new Error('Invalid practice attempt in session.');
+    if(!h||!ids.has(h.cardId)||typeof h.correct!=='boolean'||typeof h.given!=='string'||h.given.length>1000||!Number.isFinite(h.confidence)||h.confidence<0||h.confidence>100||(!Number.isFinite(h.ts)||Math.abs(h.ts)>8640000000000000)) throw new Error('Invalid practice attempt in session.');
     const c=cards.find(c=>c.id===h.cardId);
     return {...makeAttempt(c,h.given,h.confidence,h.ts)};
   });
@@ -73,16 +276,314 @@ function historyCSV(history,cards) {
   return rows.map(r=>r.map(csvEscape).join(',')).join('\r\n');
 }
 
-const $=id=>document.getElementById(id);let source='',cards=[],history=[],current=null,graded=false;
-function status(message,error=false){$('status').textContent=message;$('status').classList.toggle('error',error);}
-function view(name){document.querySelectorAll('.view').forEach(v=>v.hidden=v.id!==name+'-view');document.querySelectorAll('.steps button').forEach(b=>b.classList.toggle('active',b.dataset.view===name));if(name==='practice')renderPractice();if(name==='insights')renderInsights();status('');}
-function count(){$('char-count').textContent=$('source').value.length.toLocaleString()+' / 24,000 characters';}
-function build(){try{const c=makeCards($('source').value);source=$('source').value;cards=c;history=[];current=nextCard(cards,history);graded=false;$('card-count').textContent=cards.length;view('practice');status(`${cards.length} extractive cards ready. Check the source wording if a blank seems awkward.`);}catch(e){status(e.message,true);}}
-function renderPractice(){$('empty-practice').hidden=cards.length>0;$('practice-content').hidden=!cards.length;$('line-badge').hidden=!cards.length;if(!cards.length)return;if(!current)current=nextCard(cards,history);$('line-badge').textContent='Source line '+current.line;$('prompt').textContent=current.prompt;$('answer').value='';$('answer').disabled=false;$('confidence').value=50;$('confidence').disabled=false;$('confidence-value').textContent='50%';$('feedback').hidden=true;$('check').disabled=false;$('skip').disabled=false;graded=false;renderQueue();}
-function renderQueue(){const list=$('queue');list.replaceChildren();cards.slice().sort((a,b)=>priority(b,history)-priority(a,history)).slice(0,6).forEach(c=>{const li=document.createElement('li'),badge=document.createElement('span'),body=document.createElement('span'),small=document.createElement('small');badge.textContent='L'+c.line;body.textContent=c.prompt.length>68?c.prompt.slice(0,65)+'...':c.prompt;const past=history.filter(h=>h.cardId===c.id);small.textContent=!past.length?'Not practiced':past.at(-1).correct?'Reinforce later':past.at(-1).confidence>=75?'High-confidence miss · revisit':'Missed · revisit';body.append(small);li.append(badge,body);list.append(li);});}
-function grade(){if(!current||graded)return;if(!$('answer').value.trim()){status('Try an answer before checking, or skip this card.',true);$('answer').focus();return;}const attempt=makeAttempt(current,$('answer').value,$('confidence').value);history.push(attempt);graded=true;$('answer').disabled=true;$('confidence').disabled=true;$('check').disabled=true;$('skip').disabled=true;$('feedback').hidden=false;$('verdict').textContent=attempt.correct?'Matches your source.':'Not an exact match. Take another look.';$('expected').textContent=current.answer;$('evidence').textContent=`Line ${current.line}: ${current.evidence}`;$('reflection').textContent=attempt.correct?(attempt.confidence<50?'You recalled it with low confidence. That is worth noticing.':'Your answer matched. Try retrieving it again later.'):(attempt.confidence>=75?'You felt quite sure, but the wording did not match. Recheck the source before carrying that confidence forward.':'A miss is information, not a grade. Compare your answer with the original text. A valid paraphrase may still be marked wrong.');renderQueue();status('');}
-function renderInsights(){const m=metrics(history),has=history.length>0;$('stat-attempts').textContent=m.attempts;$('stat-accuracy').textContent=has?Math.round(m.accuracy)+'%':'—';$('stat-confidence').textContent=has?Math.round(m.confidence)+'%':'—';$('stat-misses').textContent=m.overconfidentErrors;$('accuracy-bar').style.width=m.accuracy+'%';$('confidence-bar').style.width=m.confidence+'%';$('accuracy-label').textContent=Math.round(m.accuracy)+'%';$('confidence-label').textContent=Math.round(m.confidence)+'%';$('gap-text').textContent=!has?'Practice a card to see your first signal.':Math.abs(m.gap)<10?'Your confidence is close to your exact-match recall in this small session.':m.gap>0?`Average confidence is ${Math.round(m.gap)} percentage points above exact-match recall. Revisit misses before assuming mastery.`:`Exact-match recall is ${Math.round(-m.gap)} percentage points above confidence. You may know more than you feel you do.`;const body=$('history');body.replaceChildren();if(!has){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=5;td.textContent='No attempts yet. Try a few cards, then return here.';tr.append(td);body.append(tr);}history.slice(-20).reverse().forEach(h=>{const c=cards.find(c=>c.id===h.cardId),tr=document.createElement('tr');['Line '+c.line,c.answer,h.given,h.correct?'Match':'Miss',h.confidence+'%'].forEach(s=>{const td=document.createElement('td');td.textContent=s;tr.append(td);});body.append(tr);});}
-function download(name,content,type){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>view(b.dataset.view)));$('source').addEventListener('input',count);$('sample').addEventListener('click',()=>{if(cards.length&&!confirm('Replace notes and reset practice when you generate again?'))return;$('source').value=SAMPLE;count();status('Synthetic library-planning example loaded. These are invented practice notes, not a real event.');});$('generate').addEventListener('click',()=>{if(history.length&&!confirm('Making cards again resets this session. Download your session first if needed. Continue?'))return;build();});$('back-notes').addEventListener('click',()=>view('notes'));$('confidence').addEventListener('input',()=>$('confidence-value').textContent=$('confidence').value+'%');$('check').addEventListener('click',grade);$('answer').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();grade();}});function advance(){current=nextCard(cards,history,current?.id);renderPractice();$('answer').focus();}$('next').addEventListener('click',advance);$('skip').addEventListener('click',advance);$('export-session').addEventListener('click',()=>{if(!cards.length)return status('Make cards before downloading a session.',true);download('recallroute-session.json',JSON.stringify({version:1,source,history},null,2),'application/json');});$('export-csv').addEventListener('click',()=>{if(!history.length)return status('Practice a card before exporting attempts.',true);download('recallroute-attempts.csv',historyCSV(history,cards),'text/csv');});$('import').addEventListener('click',()=>$('import-file').click());$('import-file').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>2000000)throw new Error('Session files must be under 2 MB.');const data=validateImport(JSON.parse(await file.text()));if(history.length&&!confirm('Replace this session with the imported one?'))return;({source,cards,history}=data);current=nextCard(cards,history);$('source').value=source;count();$('card-count').textContent=cards.length;view('practice');status('Session restored. Imported answers were re-scored against the notes.');}catch(err){status(err.message,true);}finally{e.target.value='';}});$('clear').addEventListener('click',()=>{if(!confirm('Clear notes, cards and answers from this tab? Export first if you want a copy.'))return;source='';cards=[];history=[];current=null;$('source').value='';$('card-count').textContent='0';count();view('notes');status('Session cleared. No server copy exists.');});count();
+// Original local 3D ribbon renderer and landing interaction. No dependencies.
+function initTopo(unused,toggle){
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const scene=document.getElementById('paper-scene'),canvas=document.getElementById('memory-loop'),ctx=canvas.getContext('2d');
+ const card=document.getElementById('paper-stack'),flip=document.getElementById('demo-flip');
+ let paused=reduced,first=true,visible=true,raf=0,last=0,time=0,x=0,y=0,tx=0,ty=0,w=0,h=0,dpr=1,turned=false;
+ let workspace=document.body.classList.contains('workspace-mode');
+ const TAU=Math.PI*2;
+ function point(t,v=0){
+   // A broad trefoil ribbon, not a stock particle background.
+   const twist=t*1.5+.6;
+   const nx=Math.cos(t)*.25*Math.cos(twist),ny=Math.sin(t)*.25*Math.cos(twist),nz=Math.sin(twist)*.25;
+   return {x:Math.sin(t)+.52*Math.sin(2*t)+v*nx,y:Math.cos(t)-.52*Math.cos(2*t)+v*ny,z:.47*Math.sin(3*t)+v*nz};
+ }
+ function project(p,rot){
+   const cy=Math.cos(rot),sy=Math.sin(rot),cx=Math.cos(-.21+y*.008),sx=Math.sin(-.21+y*.008);
+   const xx=p.x*cy+p.z*sy,zz=-p.x*sy+p.z*cy,yy=p.y*cx-zz*sx,z=p.y*sx+zz*cx;
+   const f=4.8/(4.8+z),scale=Math.min(w*.37,h*.32);
+   return {x:w*.5+xx*scale*f,y:h*.48+yy*scale*f,z,scale:f};
+ }
+ function draw(){
+  if(!ctx)return;ctx.clearRect(0,0,w,h);
+  const rot=-.28+x*.009+Math.sin(time*.13)*.11;
+  const faces=[];const n=220;
+  for(let i=0;i<n;i++){
+   const t=i/n*TAU,t2=(i+1)/n*TAU;
+   const a=project(point(t,-1),rot),b=project(point(t,1),rot),c=project(point(t2,1),rot),d=project(point(t2,-1),rot);
+   faces.push({pts:[a,b,c,d],z:(a.z+b.z+c.z+d.z)/4,t});
+  }
+  faces.sort((a,b)=>b.z-a.z);
+  // Sparse technical registration grid behind the sculptural object.
+  ctx.strokeStyle='#ffffff0b';ctx.lineWidth=.6;
+  for(let i=1;i<7;i++){let xx=i*w/7;ctx.beginPath();ctx.moveTo(xx,30);ctx.lineTo(xx,h-35);ctx.stroke();}
+  for(let i=1;i<7;i++){let yy=i*h/7;ctx.beginPath();ctx.moveTo(10,yy);ctx.lineTo(w-10,yy);ctx.stroke();}
+  faces.forEach(f=>{
+   const light=.47+.28*Math.sin(f.t*3+rot)+.18*Math.cos(f.t*2);
+   const r=Math.round(124+130*light),g=Math.round(38+84*light),b=Math.round(10+42*light);
+   ctx.beginPath();f.pts.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.closePath();
+   ctx.fillStyle=`rgb(${r} ${g} ${b})`;ctx.fill();ctx.strokeStyle=ctx.fillStyle;ctx.lineWidth=.8;ctx.stroke();
+   ctx.beginPath();ctx.moveTo(f.pts[0].x,f.pts[0].y);ctx.lineTo(f.pts[3].x,f.pts[3].y);ctx.strokeStyle=`rgba(255,190,116,${.18+light*.3})`;ctx.lineWidth=.8;ctx.stroke();
+  });
+  // Three travelling beads turn the loop into a route.
+  for(let i=0;i<3;i++){
+   const t=time*.17+i*TAU/3,p=project(point(t,0),rot);
+   ctx.beginPath();ctx.arc(p.x,p.y,4*p.scale,0,TAU);ctx.fillStyle='#fff2dc';ctx.shadowColor='#ff9d63';ctx.shadowBlur=12;ctx.fill();ctx.shadowBlur=0;
+  }
+ }
+ function frame(ts){
+  if(paused||!visible||workspace||document.hidden){raf=0;return;}
+  const dt=last?Math.min((ts-last)/1000,.05):0;last=ts;time+=dt;
+  x+=(tx-x)*.055;y+=(ty-y)*.055;
+  if(!matchMedia('(max-width: 700px)').matches)card.style.transform=`translate(-50%,-50%) rotateX(${y*.13}deg) rotateY(${x*.13}deg) rotate(-7deg)`;
+  draw();raf=requestAnimationFrame(frame);
+ }
+ function start(){if(!paused&&visible&&!workspace&&!document.hidden&&!raf){last=0;raf=requestAnimationFrame(frame);}}
+ function stop(){cancelAnimationFrame(raf);raf=0;}
+ function resize(){const r=scene.getBoundingClientRect();w=r.width;h=r.height;dpr=Math.min(devicePixelRatio||1,1.75);canvas.width=w*dpr;canvas.height=h*dpr;ctx?.setTransform(dpr,0,0,dpr,0,0);draw();}
+ function state(){document.body.classList.toggle('motion-paused',paused);toggle.textContent=paused?(first&&reduced?'Motion off':'Resume motion'):'Pause motion';toggle.setAttribute('aria-pressed',String(paused));if(paused){stop();flip.getAnimations().forEach(a=>a.cancel());}else start();}
+ scene.addEventListener('pointermove',e=>{if(paused||e.pointerType==='touch')return;const r=scene.getBoundingClientRect();tx=((e.clientX-r.left)/r.width-.5)*20;ty=((e.clientY-r.top)/r.height-.5)*20;});
+ scene.addEventListener('pointerleave',()=>{tx=ty=0;});
+ flip.addEventListener('click',()=>{
+  turned=!turned;flip.setAttribute('aria-pressed',String(turned));flip.setAttribute('aria-label',turned?'Return to the example question':'Reveal the example answer');
+  const q=document.getElementById('demo-question');q.replaceChildren();
+  if(turned){q.append('The library',document.createElement('br'),'opens at ');const a=document.createElement('span');a.className='demo-answer';a.textContent='9 AM.';q.append(a);}
+  else{q.append('The library',document.createElement('br'),'opens at ');const a=document.createElement('span');a.className='demo-blank';a.textContent='_____.';q.append(a);}
+  document.getElementById('demo-hint').textContent=turned?'Exactly where your notes said.':'Think first. Then reveal.';
+  card.classList.toggle('is-revealed',turned);
+  if(!paused)q.animate([{opacity:.2,transform:'translateY(6px)'},{opacity:1,transform:'none'}],{duration:450,easing:'cubic-bezier(.22,1,.36,1)'});
+ });
+ const capture=()=>{document.getElementById('capture-workbench').scrollIntoView({behavior:paused?'instant':'smooth',block:'start'});document.getElementById('source').focus({preventScroll:true});};
+ document.getElementById('start-capture').addEventListener('click',capture);document.getElementById('scroll-capture').addEventListener('click',capture);
+ document.getElementById('hero-sample').addEventListener('click',()=>{document.getElementById('sample').click();document.getElementById('generate').click();});
+ toggle.addEventListener('click',()=>{first=false;paused=!paused;state();});
+ document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
+ if(ctx)new ResizeObserver(resize).observe(scene);
+ new IntersectionObserver(es=>{visible=es[0].isIntersecting;if(visible)start();else stop();},{threshold:0}).observe(scene);
+ const viewObserver=new MutationObserver(()=>{const next=document.body.classList.contains('workspace-mode');if(next===workspace)return;workspace=next;if(workspace){stop();}else{resize();start();}});viewObserver.observe(document.body,{attributes:true,attributeFilter:['class']});
+ resize();state();
+}
 
-</script></body></html>
+const $=id=>document.getElementById(id);
+let source='',cards=[],history=[],current=null,graded=false,routeDrawn=false;
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer=window.matchMedia('(pointer: fine)').matches;
+
+function status(message,error=false){$('status').textContent=message;$('status').classList.toggle('error',error);}
+function moveIndicator(){const active=document.querySelector('.steps button.active'),ind=$('steps-indicator');if(!active||!ind)return;ind.style.left=active.offsetLeft+'px';ind.style.width=active.offsetWidth+'px';}
+function view(name){
+  document.querySelectorAll('.view').forEach(v=>{const on=v.id===name+'-view';v.hidden=!on;v.classList.toggle('on',on);});
+  document.querySelectorAll('.steps button').forEach(b=>b.classList.toggle('active',b.dataset.view===name));
+  document.body.classList.toggle('workspace-mode',name!=='notes');
+  moveIndicator();
+  if(name==='practice')renderPractice();
+  if(name==='insights')renderInsights();
+  status('');
+  window.scrollTo({top:0,behavior:'instant'});
+}
+function count(){$('char-count').textContent=$('source').value.length.toLocaleString()+' / 24,000 characters';}
+function build(){
+  try{
+    const c=makeCards($('source').value);
+    source=$('source').value;cards=c;history=[];current=nextCard(cards,history);graded=false;routeDrawn=false;
+    $('card-count').textContent=cards.length;
+    const pill=$('card-count');pill.classList.remove('pop');void pill.offsetWidth;pill.classList.add('pop');
+    view('practice');renderPractice(true);
+    status(`${cards.length} extractive cards ready. Check the source wording if a blank seems awkward.`);
+  }catch(e){status(e.message,true);}
+}
+
+function renderPrompt(){
+  const p=$('prompt');p.replaceChildren();
+  const start=Number(current.id.split('-').at(-1));
+  const before=current.evidence.slice(0,start),after=current.evidence.slice(start+current.answer.length);
+  const blank=document.createElement('span');blank.className='blank'+(graded?' revealed':'');blank.textContent=graded?current.answer:'________';
+  p.append(document.createTextNode(before),blank,document.createTextNode(after));
+}
+
+function renderPractice(reset=false){
+  $('empty-practice').hidden=cards.length>0;
+  $('practice-content').hidden=!cards.length;
+  $('line-badge').hidden=!cards.length;
+  if(!cards.length){renderRoute();return;}
+  if(!current)current=nextCard(cards,history);
+  if(!reset){renderQueue();renderRoute();return;}
+  $('line-badge').textContent='Source line '+current.line;
+  graded=false;
+  renderPrompt();
+  $('answer').value='';$('answer').disabled=false;
+  $('confidence').value=50;$('confidence').disabled=false;setFill(50);$('confidence-value').textContent='50%';
+  $('feedback').hidden=true;$('check').disabled=false;$('skip').disabled=false;
+  graded=false;renderQueue();renderRoute();
+}
+
+function cardState(c){
+  const past=history.filter(h=>h.cardId===c.id);
+  if(!past.length)return{key:'none',label:'Not practiced',cls:''};
+  const last=past.at(-1);
+  if(last.correct)return{key:'recalled',label:'Reinforce later',cls:'st-ok'};
+  if(last.confidence>=75)return{key:'confmiss',label:'High-confidence miss · revisit',cls:'st-confmiss'};
+  return{key:'missed',label:'Missed · revisit',cls:'st-miss'};
+}
+
+function renderQueue(){
+  const list=$('queue');list.replaceChildren();
+  cards.slice().sort((a,b)=>priority(b,history)-priority(a,history)).slice(0,6).forEach(c=>{
+    const li=document.createElement('li'),badge=document.createElement('span'),body=document.createElement('span'),small=document.createElement('small');
+    badge.textContent='L'+c.line;
+    body.textContent=c.prompt.length>68?c.prompt.slice(0,65)+'...':c.prompt;
+    const st=cardState(c);small.textContent=st.label;if(st.cls)small.className=st.cls;
+    body.append(small);li.append(badge,body);list.append(li);
+  });
+}
+
+const SVGNS='http://www.w3.org/2000/svg';
+function renderRoute(){
+  const wrap=$('route-map');wrap.replaceChildren();
+  if(!cards.length)return;
+  const n=cards.length,H=150,pad=20;
+  const W=Math.max(320,Math.round(n*26+2*pad));
+  const pts=cards.map((c,i)=>{
+    const x=n===1?W/2:pad+(W-2*pad)*(i/(n-1));
+    const y=H/2+Math.sin(i*1.7+0.9)*30+Math.sin(i*0.53)*10;
+    return{x,y,card:c};
+  });
+  const svg=document.createElementNS(SVGNS,'svg');
+  svg.style.width=W+'px';
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.setAttribute('role','group');
+  svg.setAttribute('aria-label','Practice route across your cards');
+  let d=`M ${pts[0].x} ${pts[0].y}`;
+  for(let i=1;i<pts.length;i++){
+    const p0=pts[i-1],p1=pts[i],mx=(p0.x+p1.x)/2;
+    d+=` C ${mx} ${p0.y}, ${mx} ${p1.y}, ${p1.x} ${p1.y}`;
+  }
+  const path=document.createElementNS(SVGNS,'path');
+  path.setAttribute('d',d);path.setAttribute('class','route-path');
+  svg.append(path);
+  pts.forEach((p,i)=>{
+    const st=cardState(p.card);
+    const g=document.createElementNS(SVGNS,'g');
+    g.setAttribute('class','route-node '+st.key+(current&&p.card.id===current.id?' current':''));
+    g.setAttribute('tabindex','0');g.setAttribute('role','button');
+    g.setAttribute('aria-label',`Card from line ${p.card.line}, ${st.label.toLowerCase()}`);
+    const title=document.createElementNS(SVGNS,'title');title.textContent=`Line ${p.card.line} · ${st.label}`;g.append(title);
+    const hit=document.createElementNS(SVGNS,'circle');
+    hit.setAttribute('class','hit');hit.setAttribute('cx',p.x);hit.setAttribute('cy',p.y);hit.setAttribute('r',14);
+    const halo=document.createElementNS(SVGNS,'circle');
+    halo.setAttribute('class','halo');halo.setAttribute('cx',p.x);halo.setAttribute('cy',p.y);halo.setAttribute('r',5);halo.style.transformOrigin=`${p.x}px ${p.y}px`;
+    const dot=document.createElementNS(SVGNS,'circle');
+    dot.setAttribute('class','dot');dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y);dot.setAttribute('r',5);
+    const label=document.createElementNS(SVGNS,'text');
+    label.setAttribute('x',p.x);label.setAttribute('y',p.y+18);label.textContent='L'+p.card.line;
+    g.append(hit,halo,dot,label);
+    const jump=()=>{if(current?.id===p.card.id){$(graded?'next':'answer').focus();return;}current=p.card;renderPractice(true);$('answer').focus();};
+    g.addEventListener('click',jump);
+    g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();jump();}});
+    svg.append(g);
+  });
+  wrap.append(svg);
+  const len=path.getTotalLength();
+  if(!routeDrawn&&!reduced){
+    path.style.strokeDasharray=len;path.style.strokeDashoffset=len;
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{path.style.strokeDashoffset=0;}));
+    routeDrawn=true;
+  }
+}
+
+function grade(){
+  if(!current||graded)return;
+  if(!$('answer').value.trim()){status('Try an answer before checking, or skip this card.',true);$('answer').focus();return;}
+  const attempt=makeAttempt(current,$('answer').value,$('confidence').value);
+  history.push(attempt);graded=true;
+  $('answer').disabled=true;$('confidence').disabled=true;$('check').disabled=true;$('skip').disabled=true;
+  $('feedback').hidden=false;
+  $('feedback').classList.toggle('miss',!attempt.correct);
+  $('verdict').textContent=attempt.correct?'Matches your source.':'Not an exact match. Take another look.';
+  $('expected').textContent=current.answer;
+  $('evidence').textContent=`Line ${current.line}: ${current.evidence}`;
+  $('reflection').textContent=attempt.correct
+    ?(attempt.confidence<50?'You recalled it with low confidence. That is worth noticing.':'Your answer matched. Try retrieving it again later.')
+    :(attempt.confidence>=75?'You felt quite sure, but the wording did not match. Recheck the source before carrying that confidence forward.':'A miss is information, not a grade. Compare your answer with the original text. A valid paraphrase may still be marked wrong.');
+  renderPrompt();renderQueue();renderRoute();status('');
+  $('next').focus({preventScroll:true});
+  $('feedback').scrollIntoView({block:'nearest',behavior:'instant'});
+}
+
+function tween(el,target,suffix='',dash=false){
+  if(el._tween)cancelAnimationFrame(el._tween);
+  if(dash){el.textContent='—';return;}
+  const dur=reduced?0:650,start=performance.now();
+  function step(ts){
+    const k=dur?Math.min(1,(ts-start)/dur):1,e=1-Math.pow(1-k,3);
+    el.textContent=Math.round(target*e)+suffix;
+    if(k<1)el._tween=requestAnimationFrame(step);
+  }
+  el._tween=requestAnimationFrame(step);
+}
+
+function renderInsights(){
+  const m=metrics(history),has=history.length>0;
+  tween($('stat-attempts'),m.attempts);
+  tween($('stat-accuracy'),has?m.accuracy:0,'%',!has);
+  tween($('stat-confidence'),has?m.confidence:0,'%',!has);
+  tween($('stat-misses'),m.overconfidentErrors);
+  requestAnimationFrame(()=>{
+    $('accuracy-bar').style.width=m.accuracy+'%';
+    $('confidence-bar').style.width=m.confidence+'%';
+  });
+  $('accuracy-label').textContent=Math.round(m.accuracy)+'%';
+  $('confidence-label').textContent=Math.round(m.confidence)+'%';
+  $('gap-text').textContent=!has?'Practice a card to see your first signal.'
+    :Math.abs(m.gap)<10?'Your confidence is close to your exact-match recall in this small session.'
+    :m.gap>0?`Average confidence is ${Math.round(m.gap)} percentage points above exact-match recall. Revisit misses before assuming mastery.`
+    :`Exact-match recall is ${Math.round(-m.gap)} percentage points above confidence. You may know more than you feel you do.`;
+  const body=$('history');body.replaceChildren();
+  if(!has){
+    const tr=document.createElement('tr'),td=document.createElement('td');
+    td.colSpan=5;td.textContent='No attempts yet. Try a few cards, then return here.';
+    tr.append(td);body.append(tr);
+  }
+  history.slice(-20).reverse().forEach(h=>{
+    const c=cards.find(c=>c.id===h.cardId),tr=document.createElement('tr');
+    [['Line '+c.line,''],[c.answer,''],[h.given,''],[h.correct?'MATCH':'MISS',h.correct?'ok':'no'],[h.confidence+'%','']].forEach(([s,cls])=>{
+      const td=document.createElement('td');td.textContent=s;if(cls)td.className=cls;tr.append(td);
+    });
+    body.append(tr);
+  });
+}
+
+function setFill(v){$('confidence').style.setProperty('--fill',v+'%');}
+function download(name,content,type){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>view(b.dataset.view)));
+$('source').addEventListener('input',count);
+$('sample').addEventListener('click',()=>{if(cards.length&&!confirm('Replace notes and reset practice when you generate again?'))return;$('source').value=SAMPLE;count();status('Synthetic library-planning example loaded. These are invented practice notes, not a real event.');});
+$('generate').addEventListener('click',()=>{if(history.length&&!confirm('Making cards again resets this session. Download your session first if needed. Continue?'))return;build();});
+$('back-notes').addEventListener('click',()=>view('notes'));
+$('confidence').addEventListener('input',()=>{setFill($('confidence').value);$('confidence-value').textContent=$('confidence').value+'%';});
+$('check').addEventListener('click',grade);
+$('answer').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();grade();}});
+function advance(){current=nextCard(cards,history,current?.id);renderPractice(true);$('answer').focus();}
+$('next').addEventListener('click',advance);
+$('skip').addEventListener('click',advance);
+$('export-session').addEventListener('click',()=>{if(!cards.length)return status('Make cards before downloading a session.',true);download('recallroute-session.json',JSON.stringify({version:1,source,history},null,2),'application/json');});
+$('export-csv').addEventListener('click',()=>{if(!history.length)return status('Practice a card before exporting attempts.',true);download('recallroute-attempts.csv',historyCSV(history,cards),'text/csv');});
+$('import').addEventListener('click',()=>$('import-file').click());
+$('import-file').addEventListener('change',async e=>{
+  const file=e.target.files[0];if(!file)return;
+  try{
+    if(file.size>2000000)throw new Error('Session files must be under 2 MB.');
+    const data=validateImport(JSON.parse(await file.text()));
+    if(history.length&&!confirm('Replace this session with the imported one?'))return;
+    ({source,cards,history}=data);current=nextCard(cards,history);routeDrawn=false;
+    $('source').value=source;count();$('card-count').textContent=cards.length;
+    view('practice');renderPractice(true);status('Session restored. Imported answers were re-scored against the notes.');
+  }catch(err){status(err.message,true);}
+  finally{e.target.value='';}
+});
+$('clear').addEventListener('click',()=>{
+  if(!confirm('Clear notes, cards and answers from this tab? Export first if you want a copy.'))return;
+  source='';cards=[];history=[];current=null;$('source').value='';$('card-count').textContent='0';count();view('notes');
+  status('Session cleared. No server copy exists.');
+});
+
+window.addEventListener('resize',moveIndicator);
+initTopo($('topo'),$('motion-toggle'));
+count();
+moveIndicator();
+
+</script>
+</body>
+</html>
