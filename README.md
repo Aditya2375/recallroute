@@ -70,3 +70,7 @@ Next: manual card editing, better line selection, a screen-reader and cross-brow
 ## Project status
 
 Working prototype, not a submitted hackathon entry by itself. Devpost description, demo and any personal reflection must be completed truthfully. The code is MIT licensed; see LICENSE.
+
+## AI use
+
+AI use: AI coding assistants wrote and revised most of the code and tests under the author's direction; the author reviewed the results.
